@@ -95,18 +95,20 @@ titleScreen.prototype = {
       gameHeight,
       "middleground"
     );
-    this.title = game.add.image(game.width / 2, 70, "title");
-    this.title.anchor.setTo(0.5, 0);
+    // this.title = game.add.image(game.width / 2, 70, "title");
+    // this.title.anchor.setTo(0.5, 0);
 
-    this.pressEnter = game.add.image(game.width / 2, game.height - 35, "enter");
-    this.pressEnter.anchor.setTo(0.5, 1);
+    // this.pressEnter = game.add.image(game.width / 2, game.height - 35, "enter");
+    // this.pressEnter.anchor.setTo(0.5, 1);
 
-    var startKey = game.input.keyboard.addKey(Phaser.Keyboard.ENTER);
-    startKey.onDown.add(this.startGame, this);
+    // var startKey = game.input.keyboard.addKey(Phaser.Keyboard.ENTER);
+    // startKey.onDown.add(this.startGame, this);
 
     game.time.events.loop(700, this.blinkText, this);
 
     this.state = 1;
+
+    this.game.state.start("PlayGame");
   },
   blinkText: function () {
     if (this.pressEnter.alpha) {
@@ -121,14 +123,16 @@ titleScreen.prototype = {
     middleground.tilePosition.x -= 0.6;
   },
   startGame: function () {
-    if (this.state == 1) {
-      this.state = 2;
-      this.title2 = game.add.image(game.width / 2, 0, "instructions");
-      this.title2.anchor.setTo(0.5, 0);
-      this.title.destroy();
-    } else {
-      this.game.state.start("PlayGame");
-    }
+    // if (this.state == 1) {
+    //   this.state = 2;
+    //   this.title2 = game.add.image(game.width / 2, 0, "instructions");
+    //   this.title2.anchor.setTo(0.5, 0);
+    //   this.title.destroy();
+    // } else {
+    //   this.game.state.start("PlayGame");
+    // }
+
+    this.game.state.start("PlayGame");
   },
 };
 
