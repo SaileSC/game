@@ -76,6 +76,12 @@ preload.prototype = {
       "assets/atlas/atlas-props.png",
       "assets/atlas/atlas-props.json"
     );
+    game.load.atlasJSONArray(
+      //player
+      "player",
+      "assets/atlas/player-0.png",
+      "assets/atlas/player.json"
+    );
     //
     game.load.audio("music", ["assets/sound/platformer_level03_loop.ogg"]);
   },
@@ -285,64 +291,112 @@ playGame.prototype = {
   createPlayer: function (x, y) {
     x *= 2;
     y *= 15;
-    this.player = game.add.sprite(x, y, "atlas", "player/idle/player-idle-1");
+    var gender = "masc"; //masc or fem
+    //this.player = game.add.sprite(x, y, "atlas", "player/idle/player-idle-1");
+    this.player = game.add.sprite(
+      x,
+      y,
+      "player",
+      `${gender}/idle/Player-idle.png`
+    );
     this.player.anchor.setTo(0.5);
     game.physics.arcade.enable(this.player);
     this.player.body.gravity.y = 500;
-    this.player.body.setSize(12, 16, 8, 16);
-    //add animations
+    this.player.body.setSize(12, 16, 1, 16);
+
     var animVel = 15;
     this.player.animations.add(
-      "idle",
-      Phaser.Animation.generateFrameNames(
-        "player/idle/player-idle-",
-        1,
-        4,
-        "",
-        0
-      ),
-      animVel - 3,
-      true
-    );
-    this.player.animations.add(
       "run",
-      Phaser.Animation.generateFrameNames(
-        "player/run/player-run-",
-        1,
-        6,
-        "",
-        0
-      ),
-      animVel,
-      true
-    );
-    this.player.animations.add("jump", ["player/jump/player-jump-1"], 1, false);
-    this.player.animations.add("fall", ["player/jump/player-jump-2"], 1, false);
-    this.player.animations.add(
-      "crouch",
-      Phaser.Animation.generateFrameNames(
-        "player/crouch/player-crouch-",
-        1,
-        2,
-        "",
-        0
-      ),
-      10,
-      true
+      // Phaser.Animation.generateFrameNames(
+      //   `${gender}/run/Player-run-1`,
+      //   1,
+      //   4,
+      //   "",
+      //   0
+      // ),
+      [
+        `${gender}/run/Player-run-1.png`,
+        `${gender}/run/Player-run-2.png`,
+        `${gender}/run/Player-run-3.png`,
+        `${gender}/run/Player-run-4.png`,
+      ],
+      12,
+      false
     );
     this.player.animations.add(
-      "hurt",
-      Phaser.Animation.generateFrameNames(
-        "player/hurt/player-hurt-",
-        1,
-        2,
-        "",
-        0
-      ),
-      animVel,
-      true
+      "jump",
+      [`${gender}/jump/Player-jump.png`],
+      1,
+      false
     );
-    this.player.animations.play("idle");
+    this.player.animations.add(
+      "fall",
+      [`${gender}/fall/Player-fall.png`],
+      1,
+      false
+    );
+
+    this.player.animations.add(
+      "idle",
+      [`${gender}/idle/Player-idle.png`],
+      1,
+      false
+    );
+
+    //
+    // //add animations
+    // var animVel = 15;
+    // this.player.animations.add(
+    //   "idle",
+    //   Phaser.Animation.generateFrameNames(
+    //     "player/idle/player-idle-",
+    //     1,
+    //     4,
+    //     "",
+    //     0
+    //   ),
+    //   animVel - 3,
+    //   true
+    // );
+    // this.player.animations.add(
+    //   "run",
+    //   Phaser.Animation.generateFrameNames(
+    //     "player/run/player-run-",
+    //     1,
+    //     6,
+    //     "",
+    //     0
+    //   ),
+    //   animVel,
+    //   true
+    // );
+    // this.player.animations.add("jump", ["player/jump/player-jump-1"], 1, false);
+    // this.player.animations.add("fall", ["player/jump/player-jump-2"], 1, false);
+    // this.player.animations.add(
+    //   "crouch",
+    //   Phaser.Animation.generateFrameNames(
+    //     "player/crouch/player-crouch-",
+    //     1,
+    //     2,
+    //     "",
+    //     0
+    //   ),
+    //   10,
+    //   true
+    // );
+    // this.player.animations.add(
+    //   "hurt",
+    //   Phaser.Animation.generateFrameNames(
+    //     "player/hurt/player-hurt-",
+    //     1,
+    //     2,
+    //     "",
+    //     0
+    //   ),
+    //   animVel,
+    //   true
+    // );
+    // this.player.animations.play("idle");
     // timer
     hurtTimer = game.time.create(false);
     hurtTimer.loop(500, this.resetHurt, this);

@@ -1,0 +1,354 @@
+{
+  "frames": [
+    {
+      "filename": "fem/jump/Player-jump.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 13,
+        "w": 15,
+        "h": 19
+      },
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 15,
+        "h": 19
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      }
+    },
+    {
+      "filename": "masc/jump/Player-jump.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 13,
+        "w": 15,
+        "h": 19
+      },
+      "frame": {
+        "x": 0,
+        "y": 19,
+        "w": 15,
+        "h": 19
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      }
+    },
+    {
+      "filename": "fem/fall/Player-fall.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 15,
+        "w": 15,
+        "h": 17
+      },
+      "frame": {
+        "x": 0,
+        "y": 38,
+        "w": 15,
+        "h": 17
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      }
+    },
+    {
+      "filename": "masc/fall/Player-fall.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 15,
+        "w": 15,
+        "h": 17
+      },
+      "frame": {
+        "x": 0,
+        "y": 55,
+        "w": 15,
+        "h": 17
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      }
+    },
+    {
+      "filename": "fem/idle/Player-idle.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 14,
+        "w": 14,
+        "h": 18
+      },
+      "frame": {
+        "x": 0,
+        "y": 72,
+        "w": 14,
+        "h": 18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "fem/run/Player-run-3.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 14,
+        "w": 14,
+        "h": 18
+      },
+      "frame": {
+        "x": 0,
+        "y": 90,
+        "w": 14,
+        "h": 18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      }
+    },
+    {
+      "filename": "masc/idle/Player-idle.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 14,
+        "w": 14,
+        "h": 18
+      },
+      "frame": {
+        "x": 0,
+        "y": 108,
+        "w": 14,
+        "h": 18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      }
+    },
+    {
+      "filename": "masc/run/Player-run-3.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 14,
+        "w": 14,
+        "h": 18
+      },
+      "frame": {
+        "x": 0,
+        "y": 126,
+        "w": 14,
+        "h": 18
+      },
+      "anchor": {
+        "x": 0.4375,
+        "y": 1
+      }
+    },
+    {
+      "filename": "fem/run/Player-run-1.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 14,
+        "w": 13,
+        "h": 18
+      },
+      "frame": {
+        "x": 0,
+        "y": 144,
+        "w": 13,
+        "h": 18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      }
+    },
+    {
+      "filename": "masc/run/Player-run-1.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 14,
+        "w": 13,
+        "h": 18
+      },
+      "frame": {
+        "x": 0,
+        "y": 162,
+        "w": 13,
+        "h": 18
+      },
+      "anchor": {
+        "x": 0.4375,
+        "y": 1
+      }
+    },
+    {
+      "filename": "fem/run/Player-run-4.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 15,
+        "w": 13,
+        "h": 17
+      },
+      "frame": {
+        "x": 0,
+        "y": 180,
+        "w": 13,
+        "h": 17
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      }
+    },
+    {
+      "filename": "masc/run/Player-run-4.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 15,
+        "w": 13,
+        "h": 17
+      },
+      "frame": {
+        "x": 0,
+        "y": 197,
+        "w": 13,
+        "h": 17
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      }
+    },
+    {
+      "filename": "fem/run/Player-run-2.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 15,
+        "w": 12,
+        "h": 17
+      },
+      "frame": {
+        "x": 0,
+        "y": 214,
+        "w": 12,
+        "h": 17
+      },
+      "anchor": {
+        "x": 0.4375,
+        "y": 1
+      }
+    },
+    {
+      "filename": "masc/run/Player-run-2.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 15,
+        "w": 12,
+        "h": 17
+      },
+      "frame": {
+        "x": 0,
+        "y": 231,
+        "w": 12,
+        "h": 17
+      },
+      "anchor": {
+        "x": 0.4375,
+        "y": 1
+      }
+    }
+  ]
+}
