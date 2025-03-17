@@ -14,6 +14,7 @@ var hurtFlag = false;
 var hurtTimer;
 var frogTimer;
 var frogJumpSide = "left";
+var isLanding;
 
 window.onload = function () {
   game = new Phaser.Game(gameWidth, gameHeight, Phaser.AUTO, "");
@@ -273,6 +274,7 @@ playGame.prototype = {
     this.setTopCollisionTiles(370);
     this.setTopCollisionTiles(262);
     this.setTopCollisionTiles(470);
+    this.setTopCollisionTiles(370);
   },
 
   setTopCollisionTiles: function (tileIndex) {
@@ -290,59 +292,125 @@ playGame.prototype = {
   },
 
   createPlayer: function (x, y) {
-    x *= 2;
+    x *= 3;
     y *= 15;
-    var gender = "masc"; //masc or fem
+    var gender = "Male"; //Male or Female
     //this.player = game.add.sprite(x, y, "atlas", "player/idle/player-idle-1");
     this.player = game.add.sprite(
       x,
       y,
       "player",
-      `${gender}/idle/Player-idle.png`
+      `${gender}/idle/player_idle_1.png`
     );
     this.player.anchor.setTo(0.5);
     game.physics.arcade.enable(this.player);
     this.player.body.gravity.y = 500;
-    this.player.body.setSize(12, 16, 1, 16);
+    this.player.body.setSize(12, 16, 32, 32);
 
-    var animVel = 15;
-    this.player.animations.add(
-      "run",
-      // Phaser.Animation.generateFrameNames(
-      //   `${gender}/run/Player-run-1`,
-      //   1,
-      //   4,
-      //   "",
-      //   0
-      // ),
-      [
-        `${gender}/run/Player-run-1.png`,
-        `${gender}/run/Player-run-2.png`,
-        `${gender}/run/Player-run-3.png`,
-        `${gender}/run/Player-run-4.png`,
-      ],
-      12,
-      false
-    );
-    this.player.animations.add(
-      "jump",
-      [`${gender}/jump/Player-jump.png`],
-      1,
-      false
-    );
-    this.player.animations.add(
-      "fall",
-      [`${gender}/fall/Player-fall.png`],
-      1,
-      false
-    );
-
+    var animVel = 8;
     this.player.animations.add(
       "idle",
-      [`${gender}/idle/Player-idle.png`],
-      1,
-      false
+      Phaser.Animation.generateFrameNames(
+        `${gender}/idle/player_idle_`,
+        0,
+        7,
+        ".png",
+        0
+      ),
+      animVel,
+      true
     );
+
+    this.player.animations.add(
+      "run",
+      Phaser.Animation.generateFrameNames(
+        `${gender}/run/player_run_`,
+        0,
+        7,
+        ".png",
+        0
+      ),
+      animVel,
+      true
+    );
+
+    this.player.animations.add(
+      "jump",
+      Phaser.Animation.generateFrameNames(
+        `${gender}/jump/player_jump_`,
+        0,
+        1,
+        ".png",
+        0
+      ),
+      animVel,
+      true
+    );
+
+    this.player.animations.add(
+      "fall",
+      Phaser.Animation.generateFrameNames(
+        `${gender}/fall/player_fall_`,
+        0,
+        1,
+        ".png",
+        0
+      ),
+      animVel,
+      true
+    );
+
+    this.player.animations.add(
+      "land",
+      Phaser.Animation.generateFrameNames(
+        `${gender}/land/player_land_`,
+        0,
+        2,
+        ".png",
+        0
+      ),
+      2,
+      true
+    );
+
+    // var animVel = 15;
+    // this.player.animations.add(
+    //   "run",
+    //   // Phaser.Animation.generateFrameNames(
+    //   //   `${gender}/run/Player-run-1`,
+    //   //   1,
+    //   //   4,
+    //   //   "",
+    //   //   0
+    //   // ),
+    //   [
+    //     `${gender}/run/Player-run-1.png`,
+    //     `${gender}/run/Player-run-2.png`,
+    //     `${gender}/run/Player-run-3.png`,
+    //     `${gender}/run/Player-run-4.png`,
+    //   ],
+    //   12,
+    //   false
+    // );
+    // this.player.animations.add(
+    //   "jump",
+    //   [`${gender}/jump/Player-jump.png`],
+    //   1,
+    //   false
+    // );
+    // this.player.animations.add(
+    //   "fall",
+    //   [`${gender}/fall/Player-fall.png`],
+    //   1,
+    //   false
+    // );
+
+    // this.player.animations.add(
+    //   "idle",
+    //   [`${gender}/idle/Player-idle.png`],
+    //   1,
+    //   false
+    // );
 
     //
     // //add animations
@@ -701,36 +769,66 @@ playGame.prototype = {
   movePlayer: function () {
     if (hurtFlag) {
       this.player.animations.play("hurt");
+
       return;
     }
 
-    if (this.wasd.jump.isDown && this.player.body.onFloor()) {
-      this.player.body.velocity.y = -170;
-    }
+    // Lógica de movimento horizontal
 
     var vel = 150;
+
     if (this.wasd.left.isDown) {
       this.player.body.velocity.x = -vel;
+
       this.player.animations.play("run");
-      this.player.scale.x = -1;
+
+      this.player.scale.x = -1; // Inverte o sprite para a esquerda
     } else if (this.wasd.right.isDown) {
       this.player.body.velocity.x = vel;
+
       this.player.animations.play("run");
-      this.player.scale.x = 1;
+
+      this.player.scale.x = 1; // Inverte o sprite para a direita
     } else {
-      this.player.body.velocity.x = 0;
-      if (this.wasd.crouch.isDown) {
-        this.player.animations.play("crouch");
-      } else {
-        this.player.animations.play("idle");
+      this.player.body.velocity.x = 0; // Para o movimento horizontal
+
+      if (this.player.body.onFloor()) {
+        if (this.wasd.crouch.isDown) {
+          this.player.animations.play("crouch");
+        } else {
+          this.player.animations.play("idle");
+        }
       }
     }
 
-    // jump animation
-    if (this.player.body.velocity.y < 0) {
-      this.player.animations.play("jump");
-    } else if (this.player.body.velocity.y > 0) {
-      this.player.animations.play("fall");
+    // Verifica se o jogador está no chão
+
+    if (this.player.body.onFloor()) {
+      if (!isLanding) {
+        // Se não estava aterrissando antes
+
+        this.player.animations.play("land"); // Toca a animação de aterrissagem
+
+        isLanding = true; // Marca que o jogador está aterrissando
+      }
+
+      // Se a tecla de pulo é pressionada
+
+      if (this.wasd.jump.isDown) {
+        this.player.body.velocity.y = -170; // Aplica a força de pulo
+
+        isLanding = false; // Reseta a variável de aterrissagem
+      }
+    } else {
+      // Se o jogador não está no chão, verifica a direção do movimento vertical
+
+      if (this.player.body.velocity.y < 0) {
+        this.player.animations.play("jump");
+      } else if (this.player.body.velocity.y > 0) {
+        this.player.animations.play("fall");
+
+        isLanding = false; // Reseta a variável de aterrissagem
+      }
     }
   },
 };

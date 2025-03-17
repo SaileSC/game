@@ -1,124 +1,49 @@
 {
   "frames": [
     {
-      "filename": "fem/jump/Player-jump.png",
+      "filename": "Female/climb/player_climb_1.png",
       "rotated": false,
       "trimmed": true,
       "sourceSize": {
-        "w": 16,
-        "h": 32
+        "w": 64,
+        "h": 64
       },
       "spriteSourceSize": {
-        "x": 0,
-        "y": 13,
-        "w": 15,
-        "h": 19
+        "x": 22,
+        "y": 14,
+        "w": 18,
+        "h": 35
       },
       "frame": {
         "x": 0,
         "y": 0,
-        "w": 15,
-        "h": 19
+        "w": 18,
+        "h": 35
       },
       "anchor": {
         "x": 0.5,
-        "y": 1
+        "y": 0.75
       }
     },
     {
-      "filename": "masc/jump/Player-jump.png",
+      "filename": "Female/punch/player_punch_2.png",
       "rotated": false,
       "trimmed": true,
       "sourceSize": {
-        "w": 16,
-        "h": 32
+        "w": 64,
+        "h": 64
       },
       "spriteSourceSize": {
-        "x": 0,
-        "y": 13,
-        "w": 15,
-        "h": 19
+        "x": 18,
+        "y": 20,
+        "w": 34,
+        "h": 29
       },
       "frame": {
         "x": 0,
-        "y": 19,
-        "w": 15,
-        "h": 19
-      },
-      "anchor": {
-        "x": 0.5,
-        "y": 1
-      }
-    },
-    {
-      "filename": "fem/fall/Player-fall.png",
-      "rotated": false,
-      "trimmed": true,
-      "sourceSize": {
-        "w": 16,
-        "h": 32
-      },
-      "spriteSourceSize": {
-        "x": 1,
-        "y": 15,
-        "w": 15,
-        "h": 17
-      },
-      "frame": {
-        "x": 0,
-        "y": 38,
-        "w": 15,
-        "h": 17
-      },
-      "anchor": {
-        "x": 0.5,
-        "y": 1
-      }
-    },
-    {
-      "filename": "masc/fall/Player-fall.png",
-      "rotated": false,
-      "trimmed": true,
-      "sourceSize": {
-        "w": 16,
-        "h": 32
-      },
-      "spriteSourceSize": {
-        "x": 1,
-        "y": 15,
-        "w": 15,
-        "h": 17
-      },
-      "frame": {
-        "x": 0,
-        "y": 55,
-        "w": 15,
-        "h": 17
-      },
-      "anchor": {
-        "x": 0.5,
-        "y": 1
-      }
-    },
-    {
-      "filename": "fem/idle/Player-idle.png",
-      "rotated": false,
-      "trimmed": true,
-      "sourceSize": {
-        "w": 16,
-        "h": 32
-      },
-      "spriteSourceSize": {
-        "x": 1,
-        "y": 14,
-        "w": 14,
-        "h": 18
-      },
-      "frame": {
-        "x": 0,
-        "y": 72,
-        "w": 14,
-        "h": 18
+        "y": 35,
+        "w": 34,
+        "h": 29
       },
       "anchor": {
         "x": 0.5,
@@ -126,228 +51,4928 @@
       }
     },
     {
-      "filename": "fem/run/Player-run-3.png",
+      "filename": "Female/climb/player_climb_6.png",
       "rotated": false,
       "trimmed": true,
       "sourceSize": {
-        "w": 16,
-        "h": 32
+        "w": 64,
+        "h": 64
       },
       "spriteSourceSize": {
-        "x": 0,
+        "x": 23,
         "y": 14,
-        "w": 14,
-        "h": 18
+        "w": 18,
+        "h": 35
       },
       "frame": {
-        "x": 0,
-        "y": 90,
-        "w": 14,
-        "h": 18
+        "x": 18,
+        "y": 0,
+        "w": 18,
+        "h": 35
       },
       "anchor": {
         "x": 0.5,
-        "y": 1
+        "y": 0.75
       }
     },
     {
-      "filename": "masc/idle/Player-idle.png",
+      "filename": "Female/punch/player_punch_3.png",
       "rotated": false,
       "trimmed": true,
       "sourceSize": {
-        "w": 16,
-        "h": 32
+        "w": 64,
+        "h": 64
       },
       "spriteSourceSize": {
-        "x": 1,
-        "y": 14,
-        "w": 14,
-        "h": 18
+        "x": 21,
+        "y": 20,
+        "w": 26,
+        "h": 29
       },
       "frame": {
-        "x": 0,
-        "y": 108,
-        "w": 14,
-        "h": 18
+        "x": 34,
+        "y": 35,
+        "w": 26,
+        "h": 29
       },
       "anchor": {
         "x": 0.5,
-        "y": 1
+        "y": 0.5
       }
     },
     {
-      "filename": "masc/run/Player-run-3.png",
+      "filename": "Female/death/player_death_0.png",
       "rotated": false,
       "trimmed": true,
       "sourceSize": {
-        "w": 16,
-        "h": 32
+        "w": 64,
+        "h": 64
       },
       "spriteSourceSize": {
-        "x": 0,
+        "x": 24,
         "y": 14,
-        "w": 14,
-        "h": 18
+        "w": 18,
+        "h": 35
       },
       "frame": {
-        "x": 0,
-        "y": 126,
-        "w": 14,
-        "h": 18
-      },
-      "anchor": {
-        "x": 0.4375,
-        "y": 1
-      }
-    },
-    {
-      "filename": "fem/run/Player-run-1.png",
-      "rotated": false,
-      "trimmed": true,
-      "sourceSize": {
-        "w": 16,
-        "h": 32
-      },
-      "spriteSourceSize": {
-        "x": 1,
-        "y": 14,
-        "w": 13,
-        "h": 18
-      },
-      "frame": {
-        "x": 0,
-        "y": 144,
-        "w": 13,
-        "h": 18
+        "x": 36,
+        "y": 0,
+        "w": 18,
+        "h": 35
       },
       "anchor": {
         "x": 0.5,
-        "y": 1
+        "y": 0.75
       }
     },
     {
-      "filename": "masc/run/Player-run-1.png",
+      "filename": "Male/talk/player_talk_0.png",
       "rotated": false,
       "trimmed": true,
       "sourceSize": {
-        "w": 16,
-        "h": 32
+        "w": 64,
+        "h": 64
       },
       "spriteSourceSize": {
-        "x": 1,
-        "y": 14,
-        "w": 13,
-        "h": 18
-      },
-      "frame": {
-        "x": 0,
-        "y": 162,
-        "w": 13,
-        "h": 18
-      },
-      "anchor": {
-        "x": 0.4375,
-        "y": 1
-      }
-    },
-    {
-      "filename": "fem/run/Player-run-4.png",
-      "rotated": false,
-      "trimmed": true,
-      "sourceSize": {
-        "w": 16,
-        "h": 32
-      },
-      "spriteSourceSize": {
-        "x": 1,
+        "x": 22,
         "y": 15,
-        "w": 13,
-        "h": 17
+        "w": 31,
+        "h": 34
       },
       "frame": {
-        "x": 0,
-        "y": 180,
-        "w": 13,
-        "h": 17
+        "x": 54,
+        "y": 0,
+        "w": 31,
+        "h": 34
       },
       "anchor": {
         "x": 0.5,
-        "y": 1
+        "y": 0.5
       }
     },
     {
-      "filename": "masc/run/Player-run-4.png",
+      "filename": "Female/punch/player_punch_4.png",
       "rotated": false,
       "trimmed": true,
       "sourceSize": {
-        "w": 16,
-        "h": 32
+        "w": 64,
+        "h": 64
       },
       "spriteSourceSize": {
-        "x": 1,
-        "y": 15,
-        "w": 13,
-        "h": 17
+        "x": 22,
+        "y": 19,
+        "w": 23,
+        "h": 30
       },
       "frame": {
-        "x": 0,
-        "y": 197,
-        "w": 13,
-        "h": 17
+        "x": 60,
+        "y": 34,
+        "w": 23,
+        "h": 30
       },
       "anchor": {
         "x": 0.5,
-        "y": 1
+        "y": 0.5
       }
     },
     {
-      "filename": "fem/run/Player-run-2.png",
+      "filename": "Female/run/player_run_3.png",
       "rotated": false,
       "trimmed": true,
       "sourceSize": {
-        "w": 16,
-        "h": 32
+        "w": 64,
+        "h": 64
       },
       "spriteSourceSize": {
-        "x": 2,
-        "y": 15,
-        "w": 12,
-        "h": 17
+        "x": 22,
+        "y": 11,
+        "w": 22,
+        "h": 30
       },
       "frame": {
-        "x": 0,
-        "y": 214,
-        "w": 12,
-        "h": 17
+        "x": 83,
+        "y": 34,
+        "w": 22,
+        "h": 30
       },
       "anchor": {
-        "x": 0.4375,
-        "y": 1
+        "x": 0.5,
+        "y": 0.5
       }
     },
     {
-      "filename": "masc/run/Player-run-2.png",
+      "filename": "Male/talk/player_talk_1.png",
       "rotated": false,
       "trimmed": true,
       "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 22,
+        "y": 15,
+        "w": 31,
+        "h": 34
+      },
+      "frame": {
+        "x": 85,
+        "y": 0,
+        "w": 31,
+        "h": 34
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/run/player_run_7.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 21,
+        "y": 11,
+        "w": 22,
+        "h": 30
+      },
+      "frame": {
+        "x": 105,
+        "y": 34,
+        "w": 22,
+        "h": 30
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/talk/player_talk_2.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 22,
+        "y": 15,
+        "w": 31,
+        "h": 34
+      },
+      "frame": {
+        "x": 116,
+        "y": 0,
+        "w": 31,
+        "h": 34
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/use/player_use_05.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 19,
+        "w": 22,
+        "h": 30
+      },
+      "frame": {
+        "x": 127,
+        "y": 34,
+        "w": 22,
+        "h": 30
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/talk/player_talk_3.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 22,
+        "y": 15,
+        "w": 31,
+        "h": 34
+      },
+      "frame": {
+        "x": 147,
+        "y": 0,
+        "w": 31,
+        "h": 34
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/walk/player_walk_5.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 22,
+        "y": 19,
+        "w": 22,
+        "h": 30
+      },
+      "frame": {
+        "x": 149,
+        "y": 34,
+        "w": 22,
+        "h": 30
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/idle/player_idle_5.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 21,
+        "y": 19,
+        "w": 21,
+        "h": 30
+      },
+      "frame": {
+        "x": 171,
+        "y": 34,
+        "w": 21,
+        "h": 30
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/talk/player_talk_4.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 22,
+        "y": 15,
+        "w": 31,
+        "h": 34
+      },
+      "frame": {
+        "x": 178,
+        "y": 0,
+        "w": 31,
+        "h": 34
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/use/player_use_11.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 22,
+        "y": 19,
+        "w": 20,
+        "h": 30
+      },
+      "frame": {
+        "x": 192,
+        "y": 34,
+        "w": 20,
+        "h": 30
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/talk/player_talk_5.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 22,
+        "y": 15,
+        "w": 31,
+        "h": 34
+      },
+      "frame": {
+        "x": 209,
+        "y": 0,
+        "w": 31,
+        "h": 34
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/idle/player_idle_6.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 22,
+        "y": 19,
+        "w": 19,
+        "h": 30
+      },
+      "frame": {
+        "x": 212,
+        "y": 34,
+        "w": 19,
+        "h": 30
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/idle/player_idle_7.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 22,
+        "y": 19,
+        "w": 19,
+        "h": 30
+      },
+      "frame": {
+        "x": 231,
+        "y": 34,
+        "w": 19,
+        "h": 30
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/talk/player_talk_6.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 22,
+        "y": 15,
+        "w": 31,
+        "h": 34
+      },
+      "frame": {
+        "x": 240,
+        "y": 0,
+        "w": 31,
+        "h": 34
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/pickup-ground/player_pickup_ground_1.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 23,
+        "y": 19,
+        "w": 19,
+        "h": 30
+      },
+      "frame": {
+        "x": 250,
+        "y": 34,
+        "w": 19,
+        "h": 30
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/pickup-ground/player_pickup_ground_6.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 23,
+        "y": 19,
+        "w": 19,
+        "h": 30
+      },
+      "frame": {
+        "x": 269,
+        "y": 34,
+        "w": 19,
+        "h": 30
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/talk/player_talk_0.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 25,
+        "y": 15,
+        "w": 30,
+        "h": 34
+      },
+      "frame": {
+        "x": 271,
+        "y": 0,
+        "w": 30,
+        "h": 34
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/walk/player_walk_1.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 23,
+        "y": 19,
+        "w": 19,
+        "h": 30
+      },
+      "frame": {
+        "x": 288,
+        "y": 34,
+        "w": 19,
+        "h": 30
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/talk/player_talk_1.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 25,
+        "y": 15,
+        "w": 30,
+        "h": 34
+      },
+      "frame": {
+        "x": 301,
+        "y": 0,
+        "w": 30,
+        "h": 34
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/pickup-wall/player_pickup_wall_6.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 22,
+        "y": 19,
+        "w": 18,
+        "h": 30
+      },
+      "frame": {
+        "x": 307,
+        "y": 34,
+        "w": 18,
+        "h": 30
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/climb/player_climb_2.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 24,
+        "y": 17,
+        "w": 17,
+        "h": 30
+      },
+      "frame": {
+        "x": 325,
+        "y": 34,
+        "w": 17,
+        "h": 30
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/talk/player_talk_2.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 25,
+        "y": 15,
+        "w": 30,
+        "h": 34
+      },
+      "frame": {
+        "x": 331,
+        "y": 0,
+        "w": 30,
+        "h": 34
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/climb/player_climb_4.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 24,
+        "y": 17,
+        "w": 17,
+        "h": 30
+      },
+      "frame": {
+        "x": 342,
+        "y": 34,
+        "w": 17,
+        "h": 30
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/climb/player_climb_7.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 23,
+        "y": 16,
+        "w": 17,
+        "h": 30
+      },
+      "frame": {
+        "x": 359,
+        "y": 34,
+        "w": 17,
+        "h": 30
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/talk/player_talk_3.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 25,
+        "y": 15,
+        "w": 30,
+        "h": 34
+      },
+      "frame": {
+        "x": 361,
+        "y": 0,
+        "w": 30,
+        "h": 34
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/climb/player_climb_9.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 23,
+        "y": 18,
+        "w": 17,
+        "h": 30
+      },
+      "frame": {
+        "x": 376,
+        "y": 34,
+        "w": 17,
+        "h": 30
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/talk/player_talk_4.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 25,
+        "y": 15,
+        "w": 30,
+        "h": 34
+      },
+      "frame": {
+        "x": 391,
+        "y": 0,
+        "w": 30,
+        "h": 34
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/jump/player_jump_0.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 21,
+        "y": 13,
+        "w": 20,
+        "h": 29
+      },
+      "frame": {
+        "x": 393,
+        "y": 34,
+        "w": 20,
+        "h": 29
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/jump/player_jump_1.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 21,
+        "y": 13,
+        "w": 20,
+        "h": 29
+      },
+      "frame": {
+        "x": 413,
+        "y": 34,
+        "w": 20,
+        "h": 29
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/talk/player_talk_5.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 25,
+        "y": 15,
+        "w": 30,
+        "h": 34
+      },
+      "frame": {
+        "x": 421,
+        "y": 0,
+        "w": 30,
+        "h": 34
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/use/player_use_10.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 22,
+        "y": 20,
+        "w": 20,
+        "h": 29
+      },
+      "frame": {
+        "x": 433,
+        "y": 34,
+        "w": 20,
+        "h": 29
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/talk/player_talk_6.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 25,
+        "y": 15,
+        "w": 30,
+        "h": 34
+      },
+      "frame": {
+        "x": 451,
+        "y": 0,
+        "w": 30,
+        "h": 34
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/climb/player_climb_3.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 24,
+        "y": 17,
+        "w": 17,
+        "h": 29
+      },
+      "frame": {
+        "x": 453,
+        "y": 34,
+        "w": 17,
+        "h": 29
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/run/player_run_1.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 24,
+        "y": 20,
+        "w": 17,
+        "h": 29
+      },
+      "frame": {
+        "x": 470,
+        "y": 34,
+        "w": 17,
+        "h": 29
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/damage/player_damage_0.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 17,
+        "y": 12,
+        "w": 23,
+        "h": 34
+      },
+      "frame": {
+        "x": 481,
+        "y": 0,
+        "w": 23,
+        "h": 34
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.75
+      }
+    },
+    {
+      "filename": "Male/run/player_run_5.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 24,
+        "y": 20,
+        "w": 17,
+        "h": 29
+      },
+      "frame": {
+        "x": 487,
+        "y": 34,
+        "w": 17,
+        "h": 29
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/damage/player_damage_1.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 17,
+        "y": 12,
+        "w": 23,
+        "h": 34
+      },
+      "frame": {
+        "x": 504,
+        "y": 0,
+        "w": 23,
+        "h": 34
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.75
+      }
+    },
+    {
+      "filename": "Male/punch/player_punch_0.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 15,
+        "y": 21,
+        "w": 31,
+        "h": 28
+      },
+      "frame": {
+        "x": 504,
+        "y": 34,
+        "w": 31,
+        "h": 28
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/run/player_run_0.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 24,
+        "y": 12,
+        "w": 21,
+        "h": 34
+      },
+      "frame": {
+        "x": 527,
+        "y": 0,
+        "w": 21,
+        "h": 34
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/land/player_land_1.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 21,
+        "y": 21,
+        "w": 25,
+        "h": 28
+      },
+      "frame": {
+        "x": 535,
+        "y": 34,
+        "w": 25,
+        "h": 28
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/pickup-wall/player_pickup_wall_4.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 25,
+        "y": 15,
+        "w": 19,
+        "h": 34
+      },
+      "frame": {
+        "x": 548,
+        "y": 0,
+        "w": 19,
+        "h": 34
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/punch/player_punch_4.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 22,
+        "y": 21,
+        "w": 25,
+        "h": 28
+      },
+      "frame": {
+        "x": 560,
+        "y": 34,
+        "w": 25,
+        "h": 28
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/use/player_use_06.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 22,
+        "y": 15,
+        "w": 19,
+        "h": 34
+      },
+      "frame": {
+        "x": 567,
+        "y": 0,
+        "w": 19,
+        "h": 34
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/use/player_use_07.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 22,
+        "y": 15,
+        "w": 19,
+        "h": 34
+      },
+      "frame": {
+        "x": 567,
+        "y": 0,
+        "w": 19,
+        "h": 34
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/use/player_use_08.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 22,
+        "y": 15,
+        "w": 19,
+        "h": 34
+      },
+      "frame": {
+        "x": 567,
+        "y": 0,
+        "w": 19,
+        "h": 34
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/pickup-ground/player_pickup_ground_2.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 23,
+        "y": 21,
+        "w": 21,
+        "h": 28
+      },
+      "frame": {
+        "x": 585,
+        "y": 34,
+        "w": 21,
+        "h": 28
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/use/player_use_09.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 22,
+        "y": 15,
+        "w": 19,
+        "h": 34
+      },
+      "frame": {
+        "x": 586,
+        "y": 0,
+        "w": 19,
+        "h": 34
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/use/player_use_02.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 23,
+        "y": 15,
+        "w": 18,
+        "h": 34
+      },
+      "frame": {
+        "x": 605,
+        "y": 0,
+        "w": 18,
+        "h": 34
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/pickup-ground/player_pickup_ground_3.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 23,
+        "y": 21,
+        "w": 19,
+        "h": 28
+      },
+      "frame": {
+        "x": 606,
+        "y": 34,
+        "w": 19,
+        "h": 28
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/use/player_use_03.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 23,
+        "y": 15,
+        "w": 18,
+        "h": 34
+      },
+      "frame": {
+        "x": 623,
+        "y": 0,
+        "w": 18,
+        "h": 34
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/pickup-ground/player_pickup_ground_5.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 23,
+        "y": 21,
+        "w": 19,
+        "h": 28
+      },
+      "frame": {
+        "x": 625,
+        "y": 34,
+        "w": 19,
+        "h": 28
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/use/player_use_04.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 23,
+        "y": 15,
+        "w": 18,
+        "h": 34
+      },
+      "frame": {
+        "x": 641,
+        "y": 0,
+        "w": 18,
+        "h": 34
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/pickup-ground/player_pickup_ground_5.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 25,
+        "y": 21,
+        "w": 17,
+        "h": 28
+      },
+      "frame": {
+        "x": 644,
+        "y": 34,
+        "w": 17,
+        "h": 28
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/climb/player_climb_1.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 23,
+        "y": 15,
+        "w": 18,
+        "h": 34
+      },
+      "frame": {
+        "x": 659,
+        "y": 0,
+        "w": 18,
+        "h": 34
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/climb/player_climb_8.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 23,
+        "y": 18,
+        "w": 17,
+        "h": 28
+      },
+      "frame": {
+        "x": 661,
+        "y": 34,
+        "w": 17,
+        "h": 28
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/climb/player_climb_0.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 23,
+        "y": 12,
+        "w": 17,
+        "h": 34
+      },
+      "frame": {
+        "x": 677,
+        "y": 0,
+        "w": 17,
+        "h": 34
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.75
+      }
+    },
+    {
+      "filename": "Male/punch/player_punch_1.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 18,
+        "y": 22,
+        "w": 35,
+        "h": 27
+      },
+      "frame": {
+        "x": 678,
+        "y": 34,
+        "w": 35,
+        "h": 27
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/punch/player_punch_2.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 18,
+        "y": 22,
+        "w": 35,
+        "h": 27
+      },
+      "frame": {
+        "x": 678,
+        "y": 34,
+        "w": 35,
+        "h": 27
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/climb/player_climb_5.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 23,
+        "y": 12,
+        "w": 17,
+        "h": 34
+      },
+      "frame": {
+        "x": 694,
+        "y": 0,
+        "w": 17,
+        "h": 34
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.75
+      }
+    },
+    {
+      "filename": "Male/climb/player_climb_0.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 24,
+        "y": 15,
+        "w": 17,
+        "h": 34
+      },
+      "frame": {
+        "x": 711,
+        "y": 0,
+        "w": 17,
+        "h": 34
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/punch/player_punch_3.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 21,
+        "y": 22,
+        "w": 26,
+        "h": 27
+      },
+      "frame": {
+        "x": 713,
+        "y": 34,
+        "w": 26,
+        "h": 27
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/climb/player_climb_5.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 23,
+        "y": 15,
+        "w": 17,
+        "h": 34
+      },
+      "frame": {
+        "x": 728,
+        "y": 0,
+        "w": 17,
+        "h": 34
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/run/player_run_3.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 21,
+        "y": 14,
+        "w": 24,
+        "h": 27
+      },
+      "frame": {
+        "x": 739,
+        "y": 34,
+        "w": 24,
+        "h": 27
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/pickup-wall/player_pickup_wall_2.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 26,
+        "y": 15,
+        "w": 15,
+        "h": 34
+      },
+      "frame": {
+        "x": 745,
+        "y": 0,
+        "w": 15,
+        "h": 34
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/pickup-wall/player_pickup_wall_8.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 26,
+        "y": 15,
+        "w": 15,
+        "h": 34
+      },
+      "frame": {
+        "x": 760,
+        "y": 0,
+        "w": 15,
+        "h": 34
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/run/player_run_7.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 21,
+        "y": 14,
+        "w": 24,
+        "h": 27
+      },
+      "frame": {
+        "x": 763,
+        "y": 34,
+        "w": 24,
+        "h": 27
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/fall/player_fall_0.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 19,
+        "y": 11,
+        "w": 24,
+        "h": 33
+      },
+      "frame": {
+        "x": 775,
+        "y": 0,
+        "w": 24,
+        "h": 33
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.75
+      }
+    },
+    {
+      "filename": "Female/punch/player_punch_1.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 18,
+        "w": 30,
+        "h": 31
+      },
+      "frame": {
+        "x": 787,
+        "y": 33,
+        "w": 30,
+        "h": 31
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/fall/player_fall_1.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 19,
+        "y": 11,
+        "w": 24,
+        "h": 33
+      },
+      "frame": {
+        "x": 799,
+        "y": 0,
+        "w": 24,
+        "h": 33
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.75
+      }
+    },
+    {
+      "filename": "Female/punch/player_punch_0.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 18,
+        "w": 25,
+        "h": 31
+      },
+      "frame": {
+        "x": 817,
+        "y": 33,
+        "w": 25,
+        "h": 31
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/walk/player_walk_0.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 23,
+        "y": 16,
+        "w": 22,
+        "h": 33
+      },
+      "frame": {
+        "x": 823,
+        "y": 0,
+        "w": 22,
+        "h": 33
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/run/player_run_0.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 23,
+        "y": 15,
+        "w": 23,
+        "h": 31
+      },
+      "frame": {
+        "x": 842,
+        "y": 33,
+        "w": 23,
+        "h": 31
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/walk/player_walk_4.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 23,
+        "y": 16,
+        "w": 22,
+        "h": 33
+      },
+      "frame": {
+        "x": 845,
+        "y": 0,
+        "w": 22,
+        "h": 33
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/walk/player_walk_0.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 23,
+        "y": 18,
+        "w": 23,
+        "h": 31
+      },
+      "frame": {
+        "x": 865,
+        "y": 33,
+        "w": 23,
+        "h": 31
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/pickup-wall/player_pickup_wall_4.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 22,
+        "y": 16,
+        "w": 22,
+        "h": 33
+      },
+      "frame": {
+        "x": 867,
+        "y": 0,
+        "w": 22,
+        "h": 33
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/walk/player_walk_4.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 23,
+        "y": 18,
+        "w": 23,
+        "h": 31
+      },
+      "frame": {
+        "x": 888,
+        "y": 33,
+        "w": 23,
+        "h": 31
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/run/player_run_4.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 24,
+        "y": 13,
+        "w": 21,
+        "h": 33
+      },
+      "frame": {
+        "x": 889,
+        "y": 0,
+        "w": 21,
+        "h": 33
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/wait/player_wait_1.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 26,
+        "y": 16,
+        "w": 21,
+        "h": 33
+      },
+      "frame": {
+        "x": 910,
+        "y": 0,
+        "w": 21,
+        "h": 33
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/run/player_run_4.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 24,
+        "y": 15,
+        "w": 22,
+        "h": 31
+      },
+      "frame": {
+        "x": 911,
+        "y": 33,
+        "w": 22,
+        "h": 31
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/wait/player_wait_2.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 26,
+        "y": 16,
+        "w": 21,
+        "h": 33
+      },
+      "frame": {
+        "x": 931,
+        "y": 0,
+        "w": 21,
+        "h": 33
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/use/player_use_04.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 18,
+        "w": 22,
+        "h": 31
+      },
+      "frame": {
+        "x": 933,
+        "y": 33,
+        "w": 22,
+        "h": 31
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/wait/player_wait_3.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 26,
+        "y": 16,
+        "w": 21,
+        "h": 33
+      },
+      "frame": {
+        "x": 952,
+        "y": 0,
+        "w": 21,
+        "h": 33
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/use/player_use_06.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 18,
+        "w": 22,
+        "h": 31
+      },
+      "frame": {
+        "x": 955,
+        "y": 33,
+        "w": 22,
+        "h": 31
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/use/player_use_07.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 18,
+        "w": 22,
+        "h": 31
+      },
+      "frame": {
+        "x": 955,
+        "y": 33,
+        "w": 22,
+        "h": 31
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/use/player_use_08.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 18,
+        "w": 22,
+        "h": 31
+      },
+      "frame": {
+        "x": 955,
+        "y": 33,
+        "w": 22,
+        "h": 31
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/run/player_run_2.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 25,
+        "y": 16,
+        "w": 20,
+        "h": 33
+      },
+      "frame": {
+        "x": 973,
+        "y": 0,
+        "w": 20,
+        "h": 33
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/use/player_use_09.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 18,
+        "w": 22,
+        "h": 31
+      },
+      "frame": {
+        "x": 977,
+        "y": 33,
+        "w": 22,
+        "h": 31
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/wait/player_wait_4.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 26,
+        "y": 16,
+        "w": 20,
+        "h": 33
+      },
+      "frame": {
+        "x": 993,
+        "y": 0,
+        "w": 20,
+        "h": 33
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/death/player_death_0.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 21,
+        "y": 18,
+        "w": 21,
+        "h": 31
+      },
+      "frame": {
+        "x": 999,
+        "y": 33,
+        "w": 21,
+        "h": 31
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/death/player_death_1.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 25,
+        "y": 16,
+        "w": 18,
+        "h": 33
+      },
+      "frame": {
+        "x": 1013,
+        "y": 0,
+        "w": 18,
+        "h": 33
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.75
+      }
+    },
+    {
+      "filename": "Male/idle/player_idle_3.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 21,
+        "y": 18,
+        "w": 21,
+        "h": 31
+      },
+      "frame": {
+        "x": 1020,
+        "y": 33,
+        "w": 21,
+        "h": 31
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/idle/player_idle_3.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 24,
+        "y": 16,
+        "w": 18,
+        "h": 33
+      },
+      "frame": {
+        "x": 1031,
+        "y": 0,
+        "w": 18,
+        "h": 33
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.75
+      }
+    },
+    {
+      "filename": "Male/idle/player_idle_4.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 21,
+        "y": 18,
+        "w": 21,
+        "h": 31
+      },
+      "frame": {
+        "x": 1041,
+        "y": 33,
+        "w": 21,
+        "h": 31
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/idle/player_idle_4.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 24,
+        "y": 16,
+        "w": 18,
+        "h": 33
+      },
+      "frame": {
+        "x": 1049,
+        "y": 0,
+        "w": 18,
+        "h": 33
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.75
+      }
+    },
+    {
+      "filename": "Male/wait/player_wait_1.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 23,
+        "y": 18,
+        "w": 21,
+        "h": 31
+      },
+      "frame": {
+        "x": 1062,
+        "y": 33,
+        "w": 21,
+        "h": 31
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/idle/player_idle_5.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 24,
+        "y": 16,
+        "w": 18,
+        "h": 33
+      },
+      "frame": {
+        "x": 1067,
+        "y": 0,
+        "w": 18,
+        "h": 33
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.75
+      }
+    },
+    {
+      "filename": "Male/wait/player_wait_2.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 23,
+        "y": 18,
+        "w": 21,
+        "h": 31
+      },
+      "frame": {
+        "x": 1083,
+        "y": 33,
+        "w": 21,
+        "h": 31
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/use/player_use_05.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 23,
+        "y": 16,
+        "w": 18,
+        "h": 33
+      },
+      "frame": {
+        "x": 1085,
+        "y": 0,
+        "w": 18,
+        "h": 33
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/wait/player_wait_0.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 26,
+        "y": 16,
+        "w": 18,
+        "h": 33
+      },
+      "frame": {
+        "x": 1103,
+        "y": 0,
+        "w": 18,
+        "h": 33
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/wait/player_wait_3.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 23,
+        "y": 18,
+        "w": 21,
+        "h": 31
+      },
+      "frame": {
+        "x": 1104,
+        "y": 33,
+        "w": 21,
+        "h": 31
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/climb/player_climb_6.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 23,
+        "y": 15,
+        "w": 18,
+        "h": 33
+      },
+      "frame": {
+        "x": 1121,
+        "y": 0,
+        "w": 18,
+        "h": 33
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/wait/player_wait_4.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 23,
+        "y": 18,
+        "w": 20,
+        "h": 31
+      },
+      "frame": {
+        "x": 1125,
+        "y": 33,
+        "w": 20,
+        "h": 31
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/pickup-wall/player_pickup_wall_3.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 25,
+        "y": 16,
+        "w": 17,
+        "h": 33
+      },
+      "frame": {
+        "x": 1139,
+        "y": 0,
+        "w": 17,
+        "h": 33
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/pickup-wall/player_pickup_wall_7.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 25,
+        "y": 16,
+        "w": 17,
+        "h": 33
+      },
+      "frame": {
+        "x": 1139,
+        "y": 0,
+        "w": 17,
+        "h": 33
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/pickup-ground/player_pickup_ground_2.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 24,
+        "y": 18,
+        "w": 19,
+        "h": 31
+      },
+      "frame": {
+        "x": 1145,
+        "y": 33,
+        "w": 19,
+        "h": 31
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/pickup-wall/player_pickup_wall_5.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 24,
+        "y": 16,
+        "w": 17,
+        "h": 33
+      },
+      "frame": {
+        "x": 1156,
+        "y": 0,
+        "w": 17,
+        "h": 33
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/idle/player_idle_0.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 22,
+        "y": 18,
+        "w": 19,
+        "h": 31
+      },
+      "frame": {
+        "x": 1164,
+        "y": 33,
+        "w": 19,
+        "h": 31
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/use/player_use_10.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 24,
+        "y": 16,
+        "w": 17,
+        "h": 33
+      },
+      "frame": {
+        "x": 1173,
+        "y": 0,
+        "w": 17,
+        "h": 33
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/idle/player_idle_1.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 22,
+        "y": 18,
+        "w": 19,
+        "h": 31
+      },
+      "frame": {
+        "x": 1183,
+        "y": 33,
+        "w": 19,
+        "h": 31
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/use/player_use_11.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 24,
+        "y": 16,
+        "w": 17,
+        "h": 33
+      },
+      "frame": {
+        "x": 1190,
+        "y": 0,
+        "w": 17,
+        "h": 33
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/idle/player_idle_2.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 22,
+        "y": 18,
+        "w": 19,
+        "h": 31
+      },
+      "frame": {
+        "x": 1202,
+        "y": 33,
+        "w": 19,
+        "h": 31
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/idle/player_idle_1.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 25,
+        "y": 16,
+        "w": 16,
+        "h": 33
+      },
+      "frame": {
+        "x": 1207,
+        "y": 0,
+        "w": 16,
+        "h": 33
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.75
+      }
+    },
+    {
+      "filename": "Male/pickup-ground/player_pickup_ground_0.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 22,
+        "y": 18,
+        "w": 19,
+        "h": 31
+      },
+      "frame": {
+        "x": 1221,
+        "y": 33,
+        "w": 19,
+        "h": 31
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/pickup-ground/player_pickup_ground_7.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 22,
+        "y": 18,
+        "w": 19,
+        "h": 31
+      },
+      "frame": {
+        "x": 1221,
+        "y": 33,
+        "w": 19,
+        "h": 31
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/pickup-wall/player_pickup_wall_0.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 22,
+        "y": 18,
+        "w": 19,
+        "h": 31
+      },
+      "frame": {
+        "x": 1221,
+        "y": 33,
+        "w": 19,
+        "h": 31
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/use/player_use_00.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 22,
+        "y": 18,
+        "w": 19,
+        "h": 31
+      },
+      "frame": {
+        "x": 1221,
+        "y": 33,
+        "w": 19,
+        "h": 31
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/idle/player_idle_2.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 25,
+        "y": 16,
+        "w": 16,
+        "h": 33
+      },
+      "frame": {
+        "x": 1223,
+        "y": 0,
+        "w": 16,
+        "h": 33
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.75
+      }
+    },
+    {
+      "filename": "Female/pickup-ground/player_pickup_ground_0.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 25,
+        "y": 16,
+        "w": 16,
+        "h": 33
+      },
+      "frame": {
+        "x": 1239,
+        "y": 0,
+        "w": 16,
+        "h": 33
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/pickup-ground/player_pickup_ground_7.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 25,
+        "y": 16,
+        "w": 16,
+        "h": 33
+      },
+      "frame": {
+        "x": 1239,
+        "y": 0,
+        "w": 16,
+        "h": 33
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/use/player_use_00.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 25,
+        "y": 16,
+        "w": 16,
+        "h": 33
+      },
+      "frame": {
+        "x": 1239,
+        "y": 0,
+        "w": 16,
+        "h": 33
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/use/player_use_01.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 22,
+        "y": 18,
+        "w": 19,
+        "h": 31
+      },
+      "frame": {
+        "x": 1240,
+        "y": 33,
+        "w": 19,
+        "h": 31
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/pickup-wall/player_pickup_wall_0.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 25,
+        "y": 16,
+        "w": 16,
+        "h": 33
+      },
+      "frame": {
+        "x": 1255,
+        "y": 0,
+        "w": 16,
+        "h": 33
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/use/player_use_12.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 22,
+        "y": 18,
+        "w": 19,
+        "h": 31
+      },
+      "frame": {
+        "x": 1259,
+        "y": 33,
+        "w": 19,
+        "h": 31
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/pickup-wall/player_pickup_wall_1.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 26,
+        "y": 16,
+        "w": 15,
+        "h": 33
+      },
+      "frame": {
+        "x": 1271,
+        "y": 0,
+        "w": 15,
+        "h": 33
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/jump/player_jump_0.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 23,
+        "y": 11,
+        "w": 18,
+        "h": 31
+      },
+      "frame": {
+        "x": 1278,
+        "y": 33,
+        "w": 18,
+        "h": 31
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.75
+      }
+    },
+    {
+      "filename": "Female/pickup-wall/player_pickup_wall_9.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 26,
+        "y": 16,
+        "w": 15,
+        "h": 33
+      },
+      "frame": {
+        "x": 1286,
+        "y": 0,
+        "w": 15,
+        "h": 33
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/jump/player_jump_1.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 23,
+        "y": 11,
+        "w": 18,
+        "h": 31
+      },
+      "frame": {
+        "x": 1296,
+        "y": 33,
+        "w": 18,
+        "h": 31
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.75
+      }
+    },
+    {
+      "filename": "Female/punch/player_punch_5.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 24,
+        "y": 16,
+        "w": 15,
+        "h": 33
+      },
+      "frame": {
+        "x": 1301,
+        "y": 0,
+        "w": 15,
+        "h": 33
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/walk/player_walk_1.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 23,
+        "y": 18,
+        "w": 18,
+        "h": 31
+      },
+      "frame": {
+        "x": 1314,
+        "y": 33,
+        "w": 18,
+        "h": 31
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/use/player_use_01.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 26,
+        "y": 16,
+        "w": 15,
+        "h": 33
+      },
+      "frame": {
+        "x": 1316,
+        "y": 0,
+        "w": 15,
+        "h": 33
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/use/player_use_12.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 26,
+        "y": 16,
+        "w": 15,
+        "h": 33
+      },
+      "frame": {
+        "x": 1331,
+        "y": 0,
+        "w": 15,
+        "h": 33
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/pickup-wall/player_pickup_wall_1.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 23,
+        "y": 18,
+        "w": 18,
+        "h": 31
+      },
+      "frame": {
+        "x": 1332,
+        "y": 33,
+        "w": 18,
+        "h": 31
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/pickup-wall/player_pickup_wall_9.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 23,
+        "y": 18,
+        "w": 18,
+        "h": 31
+      },
+      "frame": {
+        "x": 1332,
+        "y": 33,
+        "w": 18,
+        "h": 31
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/punch/player_punch_5.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 23,
+        "y": 18,
+        "w": 18,
+        "h": 31
+      },
+      "frame": {
+        "x": 1332,
+        "y": 33,
+        "w": 18,
+        "h": 31
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/wait/player_wait_5.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 26,
+        "y": 16,
+        "w": 15,
+        "h": 33
+      },
+      "frame": {
+        "x": 1346,
+        "y": 0,
+        "w": 15,
+        "h": 33
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/pickup-wall/player_pickup_wall_5.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 22,
+        "y": 18,
+        "w": 18,
+        "h": 31
+      },
+      "frame": {
+        "x": 1350,
+        "y": 33,
+        "w": 18,
+        "h": 31
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/walk/player_walk_3.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 26,
+        "y": 16,
+        "w": 15,
+        "h": 33
+      },
+      "frame": {
+        "x": 1361,
+        "y": 0,
+        "w": 15,
+        "h": 33
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/wait/player_wait_0.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 23,
+        "y": 18,
+        "w": 18,
+        "h": 31
+      },
+      "frame": {
+        "x": 1368,
+        "y": 33,
+        "w": 18,
+        "h": 31
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/damage/player_damage_0.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 14,
+        "y": 14,
+        "w": 25,
+        "h": 32
+      },
+      "frame": {
+        "x": 1376,
+        "y": 0,
+        "w": 25,
+        "h": 32
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/damage/player_damage_1.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 14,
+        "y": 14,
+        "w": 25,
+        "h": 32
+      },
+      "frame": {
+        "x": 1386,
+        "y": 32,
+        "w": 25,
+        "h": 32
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/run/player_run_2.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 23,
+        "y": 17,
+        "w": 22,
+        "h": 32
+      },
+      "frame": {
+        "x": 1401,
+        "y": 0,
+        "w": 22,
+        "h": 32
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/use/player_use_02.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 17,
+        "w": 22,
+        "h": 32
+      },
+      "frame": {
+        "x": 1411,
+        "y": 32,
+        "w": 22,
+        "h": 32
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/use/player_use_03.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 17,
+        "w": 22,
+        "h": 32
+      },
+      "frame": {
+        "x": 1423,
+        "y": 0,
+        "w": 22,
+        "h": 32
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/walk/player_walk_5.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 23,
+        "y": 17,
+        "w": 20,
+        "h": 32
+      },
+      "frame": {
+        "x": 1433,
+        "y": 32,
+        "w": 20,
+        "h": 32
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/death/player_death_1.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 23,
+        "y": 17,
+        "w": 20,
+        "h": 32
+      },
+      "frame": {
+        "x": 1445,
+        "y": 0,
+        "w": 20,
+        "h": 32
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/fall/player_fall_0.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 21,
+        "y": 12,
+        "w": 19,
+        "h": 32
+      },
+      "frame": {
+        "x": 1453,
+        "y": 32,
+        "w": 19,
+        "h": 32
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/fall/player_fall_1.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 21,
+        "y": 12,
+        "w": 19,
+        "h": 32
+      },
+      "frame": {
+        "x": 1465,
+        "y": 0,
+        "w": 19,
+        "h": 32
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/pickup-wall/player_pickup_wall_3.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 23,
+        "y": 17,
+        "w": 19,
+        "h": 32
+      },
+      "frame": {
+        "x": 1472,
+        "y": 32,
+        "w": 19,
+        "h": 32
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/pickup-wall/player_pickup_wall_7.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 23,
+        "y": 17,
+        "w": 19,
+        "h": 32
+      },
+      "frame": {
+        "x": 1472,
+        "y": 32,
+        "w": 19,
+        "h": 32
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/climb/player_climb_4.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 23,
+        "y": 14,
+        "w": 18,
+        "h": 32
+      },
+      "frame": {
+        "x": 1484,
+        "y": 0,
+        "w": 18,
+        "h": 32
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.75
+      }
+    },
+    {
+      "filename": "Female/climb/player_climb_9.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 22,
+        "y": 14,
+        "w": 18,
+        "h": 32
+      },
+      "frame": {
+        "x": 1491,
+        "y": 32,
+        "w": 18,
+        "h": 32
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.75
+      }
+    },
+    {
+      "filename": "Female/run/player_run_6.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 25,
+        "y": 17,
+        "w": 17,
+        "h": 32
+      },
+      "frame": {
+        "x": 1502,
+        "y": 0,
+        "w": 17,
+        "h": 32
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/run/player_run_6.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 26,
+        "y": 17,
+        "w": 17,
+        "h": 32
+      },
+      "frame": {
+        "x": 1509,
+        "y": 32,
+        "w": 17,
+        "h": 32
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/walk/player_walk_7.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 25,
+        "y": 17,
+        "w": 17,
+        "h": 32
+      },
+      "frame": {
+        "x": 1519,
+        "y": 0,
+        "w": 17,
+        "h": 32
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/idle/player_idle_0.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 25,
+        "y": 17,
         "w": 16,
         "h": 32
       },
-      "spriteSourceSize": {
-        "x": 2,
-        "y": 15,
-        "w": 12,
-        "h": 17
-      },
       "frame": {
-        "x": 0,
-        "y": 231,
-        "w": 12,
-        "h": 17
+        "x": 1526,
+        "y": 32,
+        "w": 16,
+        "h": 32
       },
       "anchor": {
-        "x": 0.4375,
-        "y": 1
+        "x": 0.5,
+        "y": 0.75
+      }
+    },
+    {
+      "filename": "Female/idle/player_idle_6.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 25,
+        "y": 17,
+        "w": 16,
+        "h": 32
+      },
+      "frame": {
+        "x": 1536,
+        "y": 0,
+        "w": 16,
+        "h": 32
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.75
+      }
+    },
+    {
+      "filename": "Female/pickup-ground/player_pickup_ground_1.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 25,
+        "y": 17,
+        "w": 16,
+        "h": 32
+      },
+      "frame": {
+        "x": 1542,
+        "y": 32,
+        "w": 16,
+        "h": 32
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/pickup-ground/player_pickup_ground_6.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 25,
+        "y": 17,
+        "w": 16,
+        "h": 32
+      },
+      "frame": {
+        "x": 1542,
+        "y": 32,
+        "w": 16,
+        "h": 32
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/pickup-wall/player_pickup_wall_6.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 24,
+        "y": 17,
+        "w": 16,
+        "h": 32
+      },
+      "frame": {
+        "x": 1552,
+        "y": 0,
+        "w": 16,
+        "h": 32
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/walk/player_walk_2.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 25,
+        "y": 17,
+        "w": 16,
+        "h": 32
+      },
+      "frame": {
+        "x": 1558,
+        "y": 32,
+        "w": 16,
+        "h": 32
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/walk/player_walk_3.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 26,
+        "y": 17,
+        "w": 16,
+        "h": 32
+      },
+      "frame": {
+        "x": 1568,
+        "y": 0,
+        "w": 16,
+        "h": 32
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/walk/player_walk_7.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 26,
+        "y": 17,
+        "w": 15,
+        "h": 32
+      },
+      "frame": {
+        "x": 1574,
+        "y": 32,
+        "w": 15,
+        "h": 32
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/pickup-wall/player_pickup_wall_2.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 26,
+        "y": 17,
+        "w": 13,
+        "h": 32
+      },
+      "frame": {
+        "x": 1584,
+        "y": 0,
+        "w": 13,
+        "h": 32
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/pickup-wall/player_pickup_wall_8.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 26,
+        "y": 17,
+        "w": 13,
+        "h": 32
+      },
+      "frame": {
+        "x": 1584,
+        "y": 0,
+        "w": 13,
+        "h": 32
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/wait/player_wait_5.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 23,
+        "y": 18,
+        "w": 18,
+        "h": 31
+      },
+      "frame": {
+        "x": 1589,
+        "y": 32,
+        "w": 18,
+        "h": 31
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/walk/player_walk_6.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 24,
+        "y": 18,
+        "w": 18,
+        "h": 31
+      },
+      "frame": {
+        "x": 1597,
+        "y": 0,
+        "w": 18,
+        "h": 31
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/climb/player_climb_2.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 23,
+        "y": 15,
+        "w": 17,
+        "h": 31
+      },
+      "frame": {
+        "x": 1607,
+        "y": 31,
+        "w": 17,
+        "h": 31
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.75
+      }
+    },
+    {
+      "filename": "Female/climb/player_climb_3.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 23,
+        "y": 14,
+        "w": 17,
+        "h": 31
+      },
+      "frame": {
+        "x": 1615,
+        "y": 0,
+        "w": 17,
+        "h": 31
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.75
+      }
+    },
+    {
+      "filename": "Female/climb/player_climb_7.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 23,
+        "y": 15,
+        "w": 17,
+        "h": 31
+      },
+      "frame": {
+        "x": 1624,
+        "y": 31,
+        "w": 17,
+        "h": 31
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.75
+      }
+    },
+    {
+      "filename": "Female/climb/player_climb_8.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 23,
+        "y": 14,
+        "w": 17,
+        "h": 31
+      },
+      "frame": {
+        "x": 1632,
+        "y": 0,
+        "w": 17,
+        "h": 31
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.75
+      }
+    },
+    {
+      "filename": "Female/run/player_run_1.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 26,
+        "y": 18,
+        "w": 17,
+        "h": 31
+      },
+      "frame": {
+        "x": 1641,
+        "y": 31,
+        "w": 17,
+        "h": 31
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/walk/player_walk_6.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 24,
+        "y": 18,
+        "w": 17,
+        "h": 31
+      },
+      "frame": {
+        "x": 1649,
+        "y": 0,
+        "w": 17,
+        "h": 31
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/walk/player_walk_2.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 25,
+        "y": 18,
+        "w": 17,
+        "h": 31
+      },
+      "frame": {
+        "x": 1658,
+        "y": 31,
+        "w": 17,
+        "h": 31
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/idle/player_idle_7.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 25,
+        "y": 18,
+        "w": 16,
+        "h": 31
+      },
+      "frame": {
+        "x": 1666,
+        "y": 0,
+        "w": 16,
+        "h": 31
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.75
+      }
+    },
+    {
+      "filename": "Female/run/player_run_5.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 26,
+        "y": 18,
+        "w": 16,
+        "h": 31
+      },
+      "frame": {
+        "x": 1675,
+        "y": 31,
+        "w": 16,
+        "h": 31
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/death/player_death_2.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 23,
+        "y": 22,
+        "w": 23,
+        "h": 27
+      },
+      "frame": {
+        "x": 1682,
+        "y": 0,
+        "w": 23,
+        "h": 27
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/death/player_death_4.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 25,
+        "y": 22,
+        "w": 20,
+        "h": 27
+      },
+      "frame": {
+        "x": 1691,
+        "y": 27,
+        "w": 20,
+        "h": 27
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.75
+      }
+    },
+    {
+      "filename": "Female/death/player_death_2.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 25,
+        "y": 22,
+        "w": 19,
+        "h": 27
+      },
+      "frame": {
+        "x": 1705,
+        "y": 0,
+        "w": 19,
+        "h": 27
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.75
+      }
+    },
+    {
+      "filename": "Female/death/player_death_3.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 25,
+        "y": 22,
+        "w": 19,
+        "h": 27
+      },
+      "frame": {
+        "x": 1705,
+        "y": 0,
+        "w": 19,
+        "h": 27
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.75
+      }
+    },
+    {
+      "filename": "Male/land/player_land_1.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 22,
+        "y": 23,
+        "w": 18,
+        "h": 26
+      },
+      "frame": {
+        "x": 1711,
+        "y": 27,
+        "w": 18,
+        "h": 26
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/death/player_death_3.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 23,
+        "y": 24,
+        "w": 23,
+        "h": 25
+      },
+      "frame": {
+        "x": 1724,
+        "y": 0,
+        "w": 23,
+        "h": 25
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/land/player_land_0.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 21,
+        "y": 24,
+        "w": 19,
+        "h": 25
+      },
+      "frame": {
+        "x": 1729,
+        "y": 25,
+        "w": 19,
+        "h": 25
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/pickup-ground/player_pickup_ground_4.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 25,
+        "y": 24,
+        "w": 17,
+        "h": 25
+      },
+      "frame": {
+        "x": 1747,
+        "y": 0,
+        "w": 17,
+        "h": 25
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/death/player_death_5.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 19,
+        "y": 36,
+        "w": 36,
+        "h": 13
+      },
+      "frame": {
+        "x": 1729,
+        "y": 50,
+        "w": 36,
+        "h": 13
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/land/player_land_0.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 25,
+        "w": 27,
+        "h": 24
+      },
+      "frame": {
+        "x": 1748,
+        "y": 25,
+        "w": 27,
+        "h": 24
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/death/player_death_5.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 21,
+        "y": 34,
+        "w": 34,
+        "h": 15
+      },
+      "frame": {
+        "x": 1765,
+        "y": 49,
+        "w": 34,
+        "h": 15
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.75
+      }
+    },
+    {
+      "filename": "Male/death/player_death_4.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 23,
+        "y": 25,
+        "w": 25,
+        "h": 24
+      },
+      "frame": {
+        "x": 1764,
+        "y": 0,
+        "w": 25,
+        "h": 24
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/pickup-ground/player_pickup_ground_3.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 24,
+        "y": 25,
+        "w": 19,
+        "h": 24
+      },
+      "frame": {
+        "x": 1775,
+        "y": 24,
+        "w": 19,
+        "h": 24
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Male/death/player_death_6.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 19,
+        "y": 36,
+        "w": 36,
+        "h": 13
+      },
+      "frame": {
+        "x": 1794,
+        "y": 0,
+        "w": 36,
+        "h": 13
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Female/death/player_death_6.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 21,
+        "y": 37,
+        "w": 35,
+        "h": 12
+      },
+      "frame": {
+        "x": 1794,
+        "y": 13,
+        "w": 35,
+        "h": 12
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.75
+      }
+    },
+    {
+      "filename": "Female/death/player_death_7.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 21,
+        "y": 37,
+        "w": 35,
+        "h": 12
+      },
+      "frame": {
+        "x": 1794,
+        "y": 25,
+        "w": 35,
+        "h": 12
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.75
+      }
+    },
+    {
+      "filename": "Male/pickup-ground/player_pickup_ground_4.png",
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 24,
+        "y": 27,
+        "w": 19,
+        "h": 22
+      },
+      "frame": {
+        "x": 1799,
+        "y": 37,
+        "w": 19,
+        "h": 22
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
       }
     }
   ]
