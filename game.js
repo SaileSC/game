@@ -143,7 +143,39 @@ titleScreen.prototype = {
   },
 };
 
-var playGame = function (game) {};
+var playGame = function (game) {
+  // Variáveis do questionário
+  this.questions = [
+    {
+      pergunta: "Qual é a capital do Brasil?",
+      respostas: ["Rio de Janeiro", "Brasília", "São Paulo", "Salvador"],
+      correta: 1,
+    },
+    {
+      pergunta: "Quantos planetas há no sistema solar?",
+      respostas: ["7", "8", "9", "10"],
+      correta: 1,
+    },
+    {
+      pergunta: "Quem pintou a Mona Lisa?",
+      respostas: ["Van Gogh", "Picasso", "Da Vinci", "Michelangelo"],
+      correta: 2,
+    },
+    {
+      pergunta: "Qual o maior país do mundo?",
+      respostas: ["China", "Rússia", "Canadá", "EUA"],
+      correta: 1,
+    },
+    {
+      pergunta: "Que ano acabou a 2ª Guerra Mundial?",
+      respostas: ["1943", "1945", "1947", "1950"],
+      correta: 1,
+    },
+  ];
+  this.currentQuestion = 0;
+  this.selectedAnswer = null;
+  this.isQuestionActive = false;
+};
 playGame.prototype = {
   create: function () {
     this.createBackgrounds();
@@ -151,14 +183,141 @@ playGame.prototype = {
     this.createWorld();
     this.decorWorld();
     this.createPlayer(54, 9);
+    //this.createPlayer(300, 19);
     this.bindKeys();
     game.camera.follow(this.player, Phaser.Camera.FOLLOW_PLATFORMER);
+
     this.populateWorld();
 
     // music
     this.music = game.add.audio("music");
     this.music.loop = true;
     this.music.play();
+
+    //modal
+    // Configurações do modal
+    const modalWidth = game.width * 0.7;
+    const modalHeight = game.height * 0.7;
+    const modalX = (game.width - modalWidth) / 2;
+    const modalY = (game.height - modalHeight) / 2;
+
+    // Cria o modal
+    this.modal = game.add.group();
+    this.modal.fixedToCamera = true;
+
+    // Fundo do modal
+    const bg = game.add.graphics(modalX, modalY);
+    bg.beginFill(0x000000, 0.9);
+    bg.lineStyle(2, 0xffffff, 1);
+    bg.drawRect(0, 0, modalWidth, modalHeight);
+    bg.endFill();
+    this.modal.add(bg);
+
+    // Texto da pergunta
+    this.questionText = game.add.text(modalWidth / 2, 20, "", {
+      font: "11px Arial",
+      fill: "#FFFFFF",
+      align: "center",
+      //wordWrap: { width: modalWidth - 40 },
+    });
+    this.questionText.anchor.set(0.5);
+    bg.addChild(this.questionText);
+
+    // Texto de ajuda
+    const helpText = game.add.text(
+      modalWidth / 2,
+      modalHeight - 5,
+      "Pressione Q para fechar",
+      { font: "10px Arial", fill: "#FFFFFF" }
+    );
+    helpText.anchor.set(0.5);
+    bg.addChild(helpText);
+
+    // Respostas
+    this.answers = [];
+    const answerStyle = {
+      font: "9px Arial",
+      fill: "#FFFFFF",
+      //backgroundColor: "#333333",
+      padding: 2,
+    };
+
+    for (let i = 0; i < 4; i++) {
+      const answer = game.add.text(
+        modalWidth / 2,
+        40 + i * 20,
+        "",
+        answerStyle
+      );
+      answer.anchor.set(0.5);
+      answer.inputEnabled = true;
+      answer.events.onInputDown.add(this.selectAnswer, this, 0, i);
+
+      // Estilização hover
+      answer.events.onInputOver.add(function () {
+        answer.setStyle({ fill: "#FFD700", font: "9px Arial" });
+      });
+      answer.events.onInputOut.add(function () {
+        answer.setStyle({ fill: "#FFFFFF", font: "9px Arial" });
+      });
+
+      bg.addChild(answer);
+      this.answers.push(answer);
+    }
+
+    this.modal.visible = false;
+
+    // Adiciona o teclado
+    this.keyQ = game.input.keyboard.addKey(Phaser.Keyboard.Q);
+    this.keyQ.onDown.add(this.toggleQuestionnaire, this);
+  },
+  toggleQuestionnaire: function () {
+    if (!this.modal.visible) {
+      // Atualiza para próxima pergunta
+      const question = this.questions[this.currentQuestion];
+
+      this.questionText.text = question.pergunta;
+      for (let i = 0; i < question.respostas.length; i++) {
+        this.answers[i].text = question.respostas[i];
+      }
+      console.log(this.currentQuestion);
+      console.log(this.questions.length);
+
+      if (this.currentQuestion < this.questions.length) {
+        this.currentQuestion = this.currentQuestion + 1;
+      }
+
+      this.selectedAnswer = null;
+    }
+
+    this.modal.visible = !this.modal.visible;
+    this.isQuestionActive = this.modal.visible;
+    game.physics.arcade.isPaused = this.isQuestionActive;
+  },
+  selectAnswer: function (target, pointer, answerIndex) {
+    this.selectedAnswer = {
+      questionIndex: this.currentQuestion - 1, // Ajusta índice pois já avançamos para próxima pergunta
+      answerIndex: answerIndex,
+    };
+
+    console.log("Resposta armazenada:", this.selectedAnswer);
+
+    const resposta = this.selectedAnswer.answerIndex;
+    const pergunta = this.questions[this.selectedAnswer.questionIndex];
+    const respostaCorreta = pergunta.correta;
+
+    console.log(pergunta);
+    console.log(pergunta.respostas[resposta]);
+
+    if (resposta === respostaCorreta) {
+      console.log("Correto");
+      alert("Correto");
+    } else {
+      console.log("Errado");
+      alert("Errado");
+    }
+
+    this.toggleQuestionnaire();
   },
   bindKeys: function () {
     this.wasd = {
@@ -176,7 +335,45 @@ playGame.prototype = {
   },
 
   decorWorld: function () {
-    // game.add.image(31 * 16, 4 * 16 + 3, "atlas-props", "tree");
+    //plataform 1
+    game.add.image(100, 51, "atlas-props", "tree");
+    game.add.image(340, 51, "atlas-props", "tree");
+    game.add.image(836, 3, "atlas-props", "tree");
+    game.add.image(1200, 51, "atlas-props", "tree");
+    game.add.image(1450, 51, "atlas-props", "tree");
+
+    //plataform 2
+    game.add.image(100, 323, "atlas-props", "tree");
+    game.add.image(340, 323, "atlas-props", "tree");
+    //game.add.image(836, 308, "atlas-props", "house");
+    game.add.image(1200, 323, "atlas-props", "tree");
+    game.add.image(1450, 323, "atlas-props", "tree");
+
+    //todos
+    game.add.image(740, 380, "atlas-props", "bush");
+    game.add.image(780, 380, "atlas-props", "sign");
+    game.add.image(820, 380, "atlas-props", "skulls");
+    game.add.image(860, 380, "atlas-props", "face-block");
+    game.add.image(900, 380, "atlas-props", "shrooms");
+    game.add.image(940, 380, "atlas-props", "big-crate");
+    game.add.image(980, 380, "atlas-props", "door");
+
+    game.add.image(740, 340, "atlas-props", "block-big");
+    game.add.image(780, 340, "atlas-props", "block");
+    game.add.image(820, 340, "atlas-props", "crank-down");
+    game.add.image(860, 340, "atlas-props", "crank-up");
+    game.add.image(900, 340, "atlas-props", "platform-long");
+    game.add.image(940, 340, "atlas-props", "rock");
+    game.add.image(980, 340, "atlas-props", "small-platform");
+
+    game.add.image(740, 300, "atlas-props", "spike-skull");
+    game.add.image(780, 300, "atlas-props", "spikes-top");
+    game.add.image(820, 300, "atlas-props", "spikes");
+    game.add.image(860, 300, "atlas-props", "crank-up");
+    game.add.image(900, 300, "atlas-props", "platform-long");
+    game.add.image(940, 300, "atlas-props", "rock");
+    game.add.image(980, 300, "atlas-props", "small-platform");
+
     // game.add.image(48 * 16, 3 * 16 + 5, "atlas-props", "house");
     // game.add.image(10 * 16, 8 * 16 + 4, "atlas-props", "bush");
     // game.add.image(11 * 16, 19 * 16 - 4, "atlas-props", "sign");
@@ -631,6 +828,7 @@ playGame.prototype = {
   },
 
   update: function () {
+    if (this.isQuestionActive) return;
     //this.debugGame();
     game.physics.arcade.collide(this.player, this.layer);
     game.physics.arcade.collide(this.enemies, this.layer);
