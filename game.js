@@ -468,6 +468,7 @@ playGame.prototype = {
     this.setTopCollisionTiles(366);
     this.setTopCollisionTiles(367);
     this.setTopCollisionTiles(368);
+    this.setTopCollisionTiles(370);
     this.setTopCollisionTiles(262);
     this.setTopCollisionTiles(470);
     this.setTopCollisionTiles(370);
@@ -849,6 +850,25 @@ playGame.prototype = {
     this.movePlayer();
     this.enemiesManager();
     this.parallaxBackground();
+
+    //posicao player
+    if (this.map) {
+      let playerX = this.player.x;
+      let playerY = this.player.y;
+
+      let tileX = Math.floor(playerX / this.map.tileWidth);
+      let tileY = Math.floor(playerY / this.map.tileHeight);
+
+      console.log(`Player posição: x=${playerX}, y=${playerY}`);
+      console.log(`Tile calculado: x=${tileX}, y=${tileY}`);
+      console.log(`Mapa tamanho: ${this.map.width}x${this.map.height}`);
+
+      let tile = this.map.getTile(tileX, tileY, this.layer);
+
+      if (tile) {
+        console.log(`Tile encontrado: ${tile ? `ID=${tile.index}` : "Nenhum"}`);
+      }
+    }
   },
 
   pickItem: function (player, item) {
