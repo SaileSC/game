@@ -183,7 +183,8 @@ playGame.prototype = {
     this.createWorld();
     this.decorWorld();
     this.createPlayer(54, 9);
-    //this.createPlayer(300, 19);
+    //this.createPlayer(70, 30);
+    //this.createPlayer(520, 25);
     this.bindKeys();
     game.camera.follow(this.player, Phaser.Camera.FOLLOW_PLATFORMER);
 
@@ -337,42 +338,68 @@ playGame.prototype = {
   decorWorld: function () {
     //plataform 1
     game.add.image(100, 51, "atlas-props", "tree");
+    game.add.image(324, 116, "atlas-props", "bush");
     game.add.image(340, 51, "atlas-props", "tree");
+    game.add.image(520, -13, "atlas-props", "tree");
     game.add.image(836, 3, "atlas-props", "tree");
-    game.add.image(1200, 51, "atlas-props", "tree");
+    game.add.image(715, 65, "atlas-props", "rock");
+    game.add.image(960, 116, "atlas-props", "bush");
+    game.add.image(1300, 116, "atlas-props", "bush");
+    game.add.image(1200, 129, "atlas-props", "rock");
+    game.add.image(1099, 3, "atlas-props", "tree");
+    game.add.image(1250, 51, "atlas-props", "tree");
     game.add.image(1450, 51, "atlas-props", "tree");
+    //plataform 1
+    game.add.image(480, 210, "atlas-props", "rock");
+    game.add.image(764, 162, "atlas-props", "big-crate");
+    game.add.image(750, 192, "atlas-props", "big-crate");
+    game.add.image(780, 192, "atlas-props", "big-crate");
 
     //plataform 2
-    game.add.image(100, 323, "atlas-props", "tree");
-    game.add.image(340, 323, "atlas-props", "tree");
-    //game.add.image(836, 308, "atlas-props", "house");
-    game.add.image(1200, 323, "atlas-props", "tree");
-    game.add.image(1450, 323, "atlas-props", "tree");
+    game.add.image(420, 323 + 80, "atlas-props", "tree");
+    game.add.image(491, 401 + 80, "atlas-props", "rock");
+    game.add.image(1036, 308 + 80, "atlas-props", "house");
+    game.add.image(1141, 400 + 80, "atlas-props", "crate");
+    game.add.image(1125, 400 + 80, "atlas-props", "crate");
+    game.add.image(1133, 384 + 80, "atlas-props", "crate");
+    game.add.image(565, 388 + 80, "atlas-props", "bush");
+    game.add.image(790, 291 + 80, "atlas-props", "tree");
+    game.add.image(730, 324 + 80, "atlas-props", "bush");
+    game.add.image(510, 323 + 80, "atlas-props", "tree");
+    game.add.image(755, 337 + 80, "atlas-props", "rock");
+    game.add.image(1200, 323 + 80, "atlas-props", "tree");
+    game.add.image(950, 401 + 80, "atlas-props", "rock");
+    game.add.image(1350, 388 + 80, "atlas-props", "bush");
+    game.add.image(1330, 388 + 80, "atlas-props", "bush");
+    game.add.image(1370, 388 + 80, "atlas-props", "bush");
+    game.add.image(1450, 323 + 80, "atlas-props", "tree");
+    game.add.image(590, 307, "atlas-props", "tree");
+    game.add.image(125, 463, "atlas-props", "door");
 
     //todos
-    game.add.image(740, 380, "atlas-props", "bush");
-    game.add.image(780, 380, "atlas-props", "sign");
-    game.add.image(820, 380, "atlas-props", "skulls");
-    game.add.image(860, 380, "atlas-props", "face-block");
-    game.add.image(900, 380, "atlas-props", "shrooms");
-    game.add.image(940, 380, "atlas-props", "big-crate");
-    game.add.image(980, 380, "atlas-props", "door");
+    // game.add.image(740, 380, "atlas-props", "bush");
+    // //game.add.image(780, 380, "atlas-props", "sign");
+    // //game.add.image(820, 380, "atlas-props", "skulls");
+    // ///game.add.image(860, 380, "atlas-props", "face-block");
+    // game.add.image(900, 380, "atlas-props", "shrooms");
+    // game.add.image(940, 380, "atlas-props", "big-crate");
+    // game.add.image(980, 380, "atlas-props", "door");
 
-    game.add.image(740, 340, "atlas-props", "block-big");
-    game.add.image(780, 340, "atlas-props", "block");
-    game.add.image(820, 340, "atlas-props", "crank-down");
-    game.add.image(860, 340, "atlas-props", "crank-up");
-    game.add.image(900, 340, "atlas-props", "platform-long");
-    game.add.image(940, 340, "atlas-props", "rock");
-    game.add.image(980, 340, "atlas-props", "small-platform");
+    // game.add.image(740, 340, "atlas-props", "block-big");
+    // game.add.image(780, 340, "atlas-props", "block");
+    // game.add.image(820, 340, "atlas-props", "crank-down");
+    // game.add.image(860, 340, "atlas-props", "crank-up");
+    // game.add.image(900, 340, "atlas-props", "platform-long");
+    // game.add.image(940, 340, "atlas-props", "rock");
+    // game.add.image(980, 340, "atlas-props", "small-platform");
 
-    game.add.image(740, 300, "atlas-props", "spike-skull");
-    game.add.image(780, 300, "atlas-props", "spikes-top");
-    game.add.image(820, 300, "atlas-props", "spikes");
-    game.add.image(860, 300, "atlas-props", "crank-up");
-    game.add.image(900, 300, "atlas-props", "platform-long");
-    game.add.image(940, 300, "atlas-props", "rock");
-    game.add.image(980, 300, "atlas-props", "small-platform");
+    // //game.add.image(740, 300, "atlas-props", "spike-skull");
+    // game.add.image(780, 300, "atlas-props", "spikes-top");
+    // game.add.image(820, 300, "atlas-props", "spikes");
+    // game.add.image(860, 300, "atlas-props", "crank-up");
+    //game.add.image(900, 300, "atlas-props", "platform-long");
+    //game.add.image(940, 300, "atlas-props", "rock");
+    //game.add.image(980, 300, "atlas-props", "small-platform");
 
     // game.add.image(48 * 16, 3 * 16 + 5, "atlas-props", "house");
     // game.add.image(10 * 16, 8 * 16 + 4, "atlas-props", "bush");
@@ -385,7 +412,7 @@ playGame.prototype = {
   populateWorld: function () {
     // groups
     this.enemies = game.add.group();
-    // this.enemies.enableBody = true;
+    this.enemies.enableBody = false;
     // //
     // this.items = game.add.group();
     // this.items.enableBody = true;
@@ -412,13 +439,14 @@ playGame.prototype = {
     // this.createGem(42, 13);
     // this.createGem(42, 16);
 
-    // // create enemies
+    // create enemies
 
     // this.createFrog(15, 9);
     // this.createFrog(30, 20);
-    // this.createEagle(33, 6);
+    this.createEagle(10, 2);
+    // this.createEagle(40, 2);
     // this.createEagle(6, 7);
-    // this.createOpossum(42, 9);
+    //this.createOpossum(5, 1);
     // this.createOpossum(23, 20);
   },
 
@@ -455,7 +483,7 @@ playGame.prototype = {
     this.map.setCollision([
       27, 29, 31, 33, 35, 37, 77, 81, 86, 87, 127, 129, 131, 133, 134, 135, 83,
       84, 502, 504, 505, 529, 530, 333, 335, 337, 339, 366, 368, 262, 191, 193,
-      195, 241, 245, 291, 293, 295,
+      195, 241, 245, 291, 293, 295, 79, 81,
     ]);
 
     // set some tiles one way collision
@@ -491,7 +519,8 @@ playGame.prototype = {
   createPlayer: function (x, y) {
     x *= 3;
     y *= 15;
-    var gender = "Male"; //Male or Female
+    //var gender = "Male"; //Male or Female
+    var gender = "Female"; //Male or Female
     //this.player = game.add.sprite(x, y, "atlas", "player/idle/player-idle-1");
     this.player = game.add.sprite(
       x,
@@ -504,7 +533,34 @@ playGame.prototype = {
     this.player.body.gravity.y = 500;
     this.player.body.setSize(12, 16, 32, 32);
 
-    var animVel = 8;
+    var animVel = 10;
+
+    this.player.animations.add(
+      "pick",
+      Phaser.Animation.generateFrameNames(
+        `${gender}/pickup-wall/player_pickup_wall_`,
+        0,
+        9,
+        ".png",
+        0
+      ),
+      animVel,
+      true
+    );
+
+    this.player.animations.add(
+      "punch",
+      Phaser.Animation.generateFrameNames(
+        `${gender}/punch/player_punch_`,
+        0,
+        7,
+        ".png",
+        0
+      ),
+      animVel,
+      true
+    );
+
     this.player.animations.add(
       "idle",
       Phaser.Animation.generateFrameNames(
@@ -743,7 +799,8 @@ playGame.prototype = {
     temp.anchor.setTo(0.5);
     game.physics.arcade.enable(temp);
     temp.body.setSize(16, 13, 8, 20);
-    //add animations
+
+    // Animação de ataque
     temp.animations.add(
       "attack",
       Phaser.Animation.generateFrameNames("eagle/eagle-attack-", 1, 4, "", 0),
@@ -751,10 +808,15 @@ playGame.prototype = {
       true
     );
     temp.animations.play("attack");
-    // tweens
+
+    // Variável para armazenar a posição anterior no eixo X
+    temp.prevX = x;
+
+    // Movimento com tween
     var VTween = game.add.tween(temp).to(
       {
-        y: y + 50,
+        y: y,
+        x: x + 50,
       },
       1000,
       Phaser.Easing.Linear.None,
@@ -762,9 +824,20 @@ playGame.prototype = {
       0,
       -1
     );
-    VTween.yoyo(true);
-    temp.enemyType = "eagle";
 
+    VTween.yoyo(true);
+
+    // Verificar direção a cada frame para ajustar a escala
+    VTween.onUpdateCallback(function () {
+      if (temp.x > temp.prevX) {
+        temp.scale.x = -1;
+      }
+
+      // Atualiza a posição anterior
+      temp.prevX = temp.x;
+    }, this);
+
+    temp.enemyType = "eagle";
     this.enemies.add(temp);
   },
 
@@ -852,23 +925,23 @@ playGame.prototype = {
     this.parallaxBackground();
 
     //posicao player
-    if (this.map) {
-      let playerX = this.player.x;
-      let playerY = this.player.y;
+    // if (this.map) {
+    //   let playerX = this.player.x;
+    //   let playerY = this.player.y;
 
-      let tileX = Math.floor(playerX / this.map.tileWidth);
-      let tileY = Math.floor(playerY / this.map.tileHeight);
+    //   let tileX = Math.floor(playerX / this.map.tileWidth);
+    //   let tileY = Math.floor(playerY / this.map.tileHeight);
 
-      console.log(`Player posição: x=${playerX}, y=${playerY}`);
-      console.log(`Tile calculado: x=${tileX}, y=${tileY}`);
-      console.log(`Mapa tamanho: ${this.map.width}x${this.map.height}`);
+    //   console.log(`Player posição: x=${playerX}, y=${playerY}`);
+    //   console.log(`Tile calculado: x=${tileX}, y=${tileY}`);
+    //   console.log(`Mapa tamanho: ${this.map.width}x${this.map.height}`);
 
-      let tile = this.map.getTile(tileX, tileY, this.layer);
+    //   let tile = this.map.getTile(tileX, tileY, this.layer);
 
-      if (tile) {
-        console.log(`Tile encontrado: ${tile ? `ID=${tile.index}` : "Nenhum"}`);
-      }
-    }
+    //   if (tile) {
+    //     console.log(`Tile encontrado: ${tile ? `ID=${tile.index}` : "Nenhum"}`);
+    //   }
+    // }
   },
 
   pickItem: function (player, item) {
