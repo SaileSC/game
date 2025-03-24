@@ -85,6 +85,9 @@ preload.prototype = {
     );
     //
     game.load.audio("music", ["assets/sound/platformer_level03_loop.ogg"]);
+
+    //cert
+    game.load.image("certificate", "assets/atlas/certificado.png");
   },
   create: function () {
     this.game.state.start("TitleScreen");
@@ -182,8 +185,8 @@ playGame.prototype = {
 
     this.createWorld();
     this.decorWorld();
-    this.createPlayer(54, 9);
-    //this.createPlayer(70, 30);
+    //this.createPlayer(54, 9);
+    this.createPlayer(450, 9);
     //this.createPlayer(520, 25);
     this.bindKeys();
     game.camera.follow(this.player, Phaser.Camera.FOLLOW_PLATFORMER);
@@ -414,8 +417,8 @@ playGame.prototype = {
     this.enemies = game.add.group();
     this.enemies.enableBody = false;
     // //
-    // this.items = game.add.group();
-    // this.items.enableBody = true;
+    this.items = game.add.group();
+    this.items.enableBody = true;
 
     // //timer for frog jumps
     // frogTimer = game.time.create(false);
@@ -423,7 +426,49 @@ playGame.prototype = {
     // frogTimer.start();
 
     // // create items
-    // this.createCherry(30, 5);
+    this.createCherry(15, 4);
+    this.createCherry(18, 4);
+
+    this.createCherry(33, 8);
+    this.createCherry(33, 10);
+    this.createCherry(33, 12);
+
+    this.createGem(41, 10);
+    this.createGem(39, 13);
+    this.createGem(43, 13);
+
+    this.createCherry(60, 4);
+    this.createCherry(71, 3);
+    this.createCherry(74, 3);
+
+    this.createGem(88, 2);
+
+    this.createCherry(97.5, 10);
+    this.createCherry(97.5, 13);
+    this.createCherry(97.5, 16);
+    this.createCherry(97.5, 19);
+    this.createCherry(97.5, 22);
+    this.createCherry(97.5, 25);
+
+    this.createCherry(89, 29);
+    this.createCherry(83, 28);
+
+    this.createCherry(54, 26);
+    this.createCherry(42, 23);
+
+    this.createGem(33, 21.5);
+    this.createGem(46, 21.5);
+
+    this.createCherry(34, 30);
+    this.createCherry(32, 29);
+
+    this.createGem(12, 30);
+    this.createGem(15, 28);
+    this.createGem(17, 28);
+    this.createGem(19, 28);
+
+    this.createCertUniq(8.5, 27);
+
     // this.createCherry(31, 5);
     // this.createCherry(32, 5);
     // //
@@ -440,10 +485,11 @@ playGame.prototype = {
     // this.createGem(42, 16);
 
     // create enemies
+    this.createEagle(10, 2, 200, 3.2);
+    this.createEagle(77, 1, 130, 3);
 
     // this.createFrog(15, 9);
     // this.createFrog(30, 20);
-    this.createEagle(10, 2);
     // this.createEagle(40, 2);
     // this.createEagle(6, 7);
     //this.createOpossum(5, 1);
@@ -521,7 +567,7 @@ playGame.prototype = {
     y *= 15;
     //var gender = "Male"; //Male or Female
     var gender = "Female"; //Male or Female
-    //this.player = game.add.sprite(x, y, "atlas", "player/idle/player-idle-1");
+    //this.player = game.add.sprite(x, y, "atlas", "player/idle/player-idle-1");s
     this.player = game.add.sprite(
       x,
       y,
@@ -531,7 +577,7 @@ playGame.prototype = {
     this.player.anchor.setTo(0.5);
     game.physics.arcade.enable(this.player);
     this.player.body.gravity.y = 500;
-    this.player.body.setSize(12, 16, 32, 32);
+    this.player.body.setSize(20, 32, 22, 16);
 
     var animVel = 10;
 
@@ -792,7 +838,7 @@ playGame.prototype = {
     this.enemies.add(temp);
   },
 
-  createEagle: function (x, y) {
+  createEagle: function (x, y, d, t = 1) {
     x *= 16;
     y *= 16;
     var temp = game.add.sprite(x, y, "atlas", "eagle/eagle-attack-1");
@@ -816,9 +862,9 @@ playGame.prototype = {
     var VTween = game.add.tween(temp).to(
       {
         y: y,
-        x: x + 50,
+        x: x + d,
       },
-      1000,
+      1000 * t,
       Phaser.Easing.Linear.None,
       true,
       0,
@@ -831,6 +877,8 @@ playGame.prototype = {
     VTween.onUpdateCallback(function () {
       if (temp.x > temp.prevX) {
         temp.scale.x = -1;
+      } else {
+        temp.scale.x = 1;
       }
 
       // Atualiza a posição anterior
@@ -900,19 +948,60 @@ playGame.prototype = {
 
     this.items.add(temp);
   },
+  createCertUniqr: function (x, y) {
+    x *= 16;
+    y *= 16;
+    // Cria o sprite usando a imagem carregada diretamente
+    var temp = game.add.sprite(x, y, "D");
+    temp.anchor.setTo(0.5);
+    game.physics.arcade.enable(temp);
+
+    // Remove as linhas relacionadas à animação:
+    // temp.animations.add(...)
+    // temp.animations.play(...)
+
+    this.items.add(temp);
+  },
+  createCertUniq: function (x, y) {
+    x *= 16;
+    y *= 16;
+
+    var temp = game.add.sprite(x, y, "certificate");
+    temp.anchor.setTo(0.5);
+    temp.scale.setTo(0.3); // Diminui o tamanho inicial para 50%
+    game.physics.arcade.enable(temp);
+
+    // Animação de pulsação suave
+    game.add
+      .tween(temp.scale)
+      .to(
+        {
+          x: 0.35, // Aumenta 20% a partir de 0.5 (fica 0.6)
+          y: 0.35,
+        },
+        350,
+        Phaser.Easing.Linear.None
+      )
+      .to(
+        {
+          x: 0.25,
+          y: 0.25,
+        },
+        350,
+        Phaser.Easing.Linear.None
+      )
+      .loop()
+      .start();
+
+    this.items.add(temp);
+  },
 
   update: function () {
     if (this.isQuestionActive) return;
     //this.debugGame();
     game.physics.arcade.collide(this.player, this.layer);
     game.physics.arcade.collide(this.enemies, this.layer);
-    game.physics.arcade.overlap(
-      this.player,
-      this.enemies,
-      this.checkAgainstEnemies,
-      null,
-      this
-    );
+    game.physics.arcade.overlap(this.player, null, this);
     game.physics.arcade.overlap(
       this.player,
       this.items,
