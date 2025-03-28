@@ -5,9 +5,6 @@
  * Get free assets and code at: www.pixelgameart.org
  * */
 
-var gameData = {
-  questions: [],
-};
 var game;
 var background;
 var middleground;
@@ -96,7 +93,7 @@ preload.prototype = {
     game.load.json("questions", "questions.json");
   },
   create: function () {
-    gameData.questions = this.game.cache.getJSON("questions");
+    game.cache.getJSON("questions");
     this.game.state.start("TitleScreen");
   },
 };
@@ -112,8 +109,19 @@ titleScreen.prototype = {
       gameHeight,
       "middleground"
     );
+    // this.title = game.add.image(game.width / 2, 70, "title");
+    // this.title.anchor.setTo(0.5, 0);
+
+    // this.pressEnter = game.add.image(game.width / 2, game.height - 35, "enter");
+    // this.pressEnter.anchor.setTo(0.5, 1);
+
+    // var startKey = game.input.keyboard.addKey(Phaser.Keyboard.ENTER);
+    // startKey.onDown.add(this.startGame, this);
+
     game.time.events.loop(700, this.blinkText, this);
+
     this.state = 1;
+
     this.game.state.start("PlayGame");
   },
   blinkText: function () {
@@ -129,14 +137,22 @@ titleScreen.prototype = {
     middleground.tilePosition.x -= 0.6;
   },
   startGame: function () {
+    // if (this.state == 1) {
+    //   this.state = 2;
+    //   this.title2 = game.add.image(game.width / 2, 0, "instructions");
+    //   this.title2.anchor.setTo(0.5, 0);
+    //   this.title.destroy();
+    // } else {
+    //   this.game.state.start("PlayGame");
+    // }
+
     this.game.state.start("PlayGame");
   },
 };
 
 var playGame = function (game) {
   // Variáveis do questionário
-  //this.questions = questionsData.perguntas;
-  this.questions = [];
+  this.questions = questionsData.perguntas;
   this.currentQuestion = 0;
   this.selectedAnswer = null;
   this.isQuestionActive = false;
@@ -144,7 +160,7 @@ var playGame = function (game) {
 playGame.prototype = {
   create: function () {
     this.createBackgrounds();
-    this.questions = gameData.questions.perguntas;
+    console.log(this.questionsData);
 
     this.createWorld();
     this.decorWorld();
@@ -163,8 +179,8 @@ playGame.prototype = {
 
     //modal
     // Configurações do modal
-    const modalWidth = game.width * 0.85;
-    const modalHeight = game.height * 0.8;
+    const modalWidth = game.width * 0.7;
+    const modalHeight = game.height * 0.7;
     const modalX = (game.width - modalWidth) / 2;
     const modalY = (game.height - modalHeight) / 2;
 
@@ -181,13 +197,11 @@ playGame.prototype = {
     this.modal.add(bg);
 
     // Texto da pergunta
-    this.questionText = game.add.text(modalWidth / 2, 29, "", {
-      //font: "10px PixelifySans",
-      font: "10px Arial",
-      fill: "#FFFFFF", // Cor do texto
-      align: "justify", // Alinhamento do texto
-      wordWrap: true, // Ativa a quebra de linha automática
-      wordWrapWidth: modalWidth - 10, // Define a largura máxima para quebra de linha
+    this.questionText = game.add.text(modalWidth / 2, 20, "", {
+      font: "11px Arial",
+      fill: "#FFFFFF",
+      align: "center",
+      //wordWrap: { width: modalWidth - 40 },
     });
     this.questionText.anchor.set(0.5);
     bg.addChild(this.questionText);
@@ -197,10 +211,10 @@ playGame.prototype = {
       modalWidth / 2,
       modalHeight - 5,
       "Pressione Q para fechar",
-      { font: "1px Arial", fill: "#FFFFFF" }
+      { font: "10px Arial", fill: "#FFFFFF" }
     );
     helpText.anchor.set(0.5);
-    //bg.addChild(helpText);
+    bg.addChild(helpText);
 
     // Respostas
     this.answers = [];
@@ -208,12 +222,13 @@ playGame.prototype = {
       font: "9px Arial",
       fill: "#FFFFFF",
       //backgroundColor: "#333333",
+      padding: 2,
     };
 
     for (let i = 0; i < 4; i++) {
       const answer = game.add.text(
         modalWidth / 2,
-        60 + i * 20,
+        40 + i * 20,
         "",
         answerStyle
       );
@@ -226,7 +241,7 @@ playGame.prototype = {
         answer.setStyle({ fill: "#FFD700", font: "9px Arial" });
       });
       answer.events.onInputOut.add(function () {
-        answer.setStyle({ fill: "#FFFFFF", font: "9qpx Arial" });
+        answer.setStyle({ fill: "#FFFFFF", font: "9px Arial" });
       });
 
       bg.addChild(answer);
@@ -244,10 +259,12 @@ playGame.prototype = {
       // Atualiza para próxima pergunta
       const question = this.questions[this.currentQuestion];
 
-      this.questionText.text = question.descricao;
-      for (let i = 0; i < question.opcoes.length; i++) {
-        this.answers[i].text = question.opcoes[i];
+      this.questionText.text = question.pergunta;
+      for (let i = 0; i < question.respostas.length; i++) {
+        this.answers[i].text = question.respostas[i];
       }
+      console.log(this.currentQuestion);
+      console.log(this.questions.length);
 
       if (this.currentQuestion < this.questions.length) {
         this.currentQuestion = this.currentQuestion + 1;
@@ -340,6 +357,38 @@ playGame.prototype = {
     game.add.image(1450, 323 + 80, "atlas-props", "tree");
     game.add.image(590, 307, "atlas-props", "tree");
     game.add.image(125, 463, "atlas-props", "door");
+
+    //todos
+    // game.add.image(740, 380, "atlas-props", "bush");
+    // //game.add.image(780, 380, "atlas-props", "sign");
+    // //game.add.image(820, 380, "atlas-props", "skulls");
+    // ///game.add.image(860, 380, "atlas-props", "face-block");
+    // game.add.image(900, 380, "atlas-props", "shrooms");
+    // game.add.image(940, 380, "atlas-props", "big-crate");
+    // game.add.image(980, 380, "atlas-props", "door");
+
+    // game.add.image(740, 340, "atlas-props", "block-big");
+    // game.add.image(780, 340, "atlas-props", "block");
+    // game.add.image(820, 340, "atlas-props", "crank-down");
+    // game.add.image(860, 340, "atlas-props", "crank-up");
+    // game.add.image(900, 340, "atlas-props", "platform-long");
+    // game.add.image(940, 340, "atlas-props", "rock");
+    // game.add.image(980, 340, "atlas-props", "small-platform");
+
+    // //game.add.image(740, 300, "atlas-props", "spike-skull");
+    // game.add.image(780, 300, "atlas-props", "spikes-top");
+    // game.add.image(820, 300, "atlas-props", "spikes");
+    // game.add.image(860, 300, "atlas-props", "crank-up");
+    //game.add.image(900, 300, "atlas-props", "platform-long");
+    //game.add.image(940, 300, "atlas-props", "rock");
+    //game.add.image(980, 300, "atlas-props", "small-platform");
+
+    // game.add.image(48 * 16, 3 * 16 + 5, "atlas-props", "house");
+    // game.add.image(10 * 16, 8 * 16 + 4, "atlas-props", "bush");
+    // game.add.image(11 * 16, 19 * 16 - 4, "atlas-props", "sign");
+    // game.add.image(15 * 16, 19 * 16 + 6, "atlas-props", "skulls");
+    // game.add.image(23 * 16, 19 * 16, "atlas-props", "face-block");
+    // game.add.image(28 * 16, 20 * 16, "atlas-props", "shrooms");
   },
 
   populateWorld: function () {
@@ -398,9 +447,32 @@ playGame.prototype = {
     this.createGem(19, 28);
 
     this.createCertUniq(8.5, 27);
+
+    // this.createCherry(31, 5);
+    // this.createCherry(32, 5);
+    // //
+    // this.createCherry(23, 17);
+    // this.createCherry(24, 17);
+    // this.createCherry(25, 17);
+    // //
+    // this.createGem(3, 6);
+    // this.createGem(4, 6);
+    // this.createGem(5, 6);
+    // //
+    // this.createGem(44, 12);
+    // this.createGem(42, 13);
+    // this.createGem(42, 16);
+
     // create enemies
     this.createEagle(10, 2, 200, 3.2);
     this.createEagle(77, 1, 130, 3);
+
+    // this.createFrog(15, 9);
+    // this.createFrog(30, 20);
+    // this.createEagle(40, 2);
+    // this.createEagle(6, 7);
+    //this.createOpossum(5, 1);
+    // this.createOpossum(23, 20);
   },
 
   switchFrogJump: function () {
@@ -472,8 +544,9 @@ playGame.prototype = {
   createPlayer: function (x, y) {
     x *= 3;
     y *= 15;
-    var gender = "Male"; //Male or Female
-    //var gender = "Female"; //Male or Female
+    //var gender = "Male"; //Male or Female
+    var gender = "Female"; //Male or Female
+    //this.player = game.add.sprite(x, y, "atlas", "player/idle/player-idle-1");s
     this.player = game.add.sprite(
       x,
       y,
@@ -577,6 +650,101 @@ playGame.prototype = {
       2,
       true
     );
+
+    // var animVel = 15;
+    // this.player.animations.add(
+    //   "run",
+    //   // Phaser.Animation.generateFrameNames(
+    //   //   `${gender}/run/Player-run-1`,
+    //   //   1,
+    //   //   4,
+    //   //   "",
+    //   //   0
+    //   // ),
+    //   [
+    //     `${gender}/run/Player-run-1.png`,
+    //     `${gender}/run/Player-run-2.png`,
+    //     `${gender}/run/Player-run-3.png`,
+    //     `${gender}/run/Player-run-4.png`,
+    //   ],
+    //   12,
+    //   false
+    // );
+    // this.player.animations.add(
+    //   "jump",
+    //   [`${gender}/jump/Player-jump.png`],
+    //   1,
+    //   false
+    // );
+    // this.player.animations.add(
+    //   "fall",
+    //   [`${gender}/fall/Player-fall.png`],
+    //   1,
+    //   false
+    // );
+
+    // this.player.animations.add(
+    //   "idle",
+    //   [`${gender}/idle/Player-idle.png`],
+    //   1,
+    //   false
+    // );
+
+    //
+    // //add animations
+    // var animVel = 15;
+    // this.player.animations.add(
+    //   "idle",
+    //   Phaser.Animation.generateFrameNames(
+    //     "player/idle/player-idle-",
+    //     1,
+    //     4,
+    //     "",
+    //     0
+    //   ),
+    //   animVel - 3,
+    //   true
+    // );
+    // this.player.animations.add(
+    //   "run",
+    //   Phaser.Animation.generateFrameNames(
+    //     "player/run/player-run-",
+    //     1,
+    //     6,
+    //     "",
+    //     0
+    //   ),
+    //   animVel,
+    //   true
+    // );
+    // this.player.animations.add("jump", ["player/jump/player-jump-1"], 1, false);
+    // this.player.animations.add("fall", ["player/jump/player-jump-2"], 1, false);
+    // this.player.animations.add(
+    //   "crouch",
+    //   Phaser.Animation.generateFrameNames(
+    //     "player/crouch/player-crouch-",
+    //     1,
+    //     2,
+    //     "",
+    //     0
+    //   ),
+    //   10,
+    //   true
+    // );
+    // this.player.animations.add(
+    //   "hurt",
+    //   Phaser.Animation.generateFrameNames(
+    //     "player/hurt/player-hurt-",
+    //     1,
+    //     2,
+    //     "",
+    //     0
+    //   ),
+    //   animVel,
+    //   true
+    // );
+    // this.player.animations.play("idle");
+    // timer
     hurtTimer = game.time.create(false);
     hurtTimer.loop(500, this.resetHurt, this);
   },
