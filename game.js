@@ -419,8 +419,8 @@ playGame.prototype = {
 
     this.createWorld();
     this.decorWorld();
-    this.createPlayer(7.5, 8);
-    //this.createPlayer(45, 8);
+    //this.createPlayer(7.5, 8);
+    this.createPlayer(89, 8);
     this.bindKeys();
     game.camera.follow(this.player, Phaser.Camera.FOLLOW_PLATFORMER);
 
@@ -515,7 +515,7 @@ playGame.prototype = {
       stroke: "#000000",
       strokeThickness: 1,
       wordWrap: true,
-      wordWrapWidth: this.modal.width - 40,
+      wordWrapWidth: this.modal.width - 20,
     };
 
     for (let i = 0; i < question.opcoes.length; i++) {
@@ -525,7 +525,7 @@ playGame.prototype = {
       this.answers[i].setStyle(defaultAnswerStyle);
 
       // Posicionamento padrão
-      this.answers[i].y = 55 + i * 25;
+      this.answers[i].y = 50;
       this.answers[i].anchor.set(0.5, 0);
 
       // Condições para personalização específica
@@ -539,6 +539,42 @@ playGame.prototype = {
         this.answers[i].y = space + i * 22;
       } else if (questionIndex == 0) {
         const space = 70;
+        this.answers[i].setStyle({
+          font: "10px 'Press Start 2P'",
+          fill: "#FFFFFF",
+          wordWrapWidth: this.modal.width - 20,
+        });
+        this.answers[i].y = space + i * 22;
+      } else if (questionIndex == 5) {
+        const space = 50;
+
+        if (i == 0) {
+          this.answers[i].y = space + i * 22;
+        } else if (i == 1) {
+          this.answers[i].y = space + 1.7 * 22;
+        } else if (i == 2) {
+          this.answers[i].y = space + 2.4 * 22;
+        } else if (i == 3) {
+          this.answers[i].y = space + 3.8 * 22;
+        }
+
+        if (i == 0 || i == 2) {
+          this.answers[i].setStyle({
+            font: "10px 'Press Start 2P'",
+            fill: "#FFFFFF",
+            wordWrap: true,
+            wordWrapWidth: this.modal.width - 20,
+          });
+        } else {
+          this.answers[i].setStyle({
+            font: "10px 'Press Start 2P'",
+            fill: "#FFFFFF",
+            wordWrapWidth: this.modal.width - 20,
+          });
+        }
+      } else {
+        const space = 50;
+
         this.answers[i].setStyle({
           font: "10px 'Press Start 2P'",
           fill: "#FFFFFF",
@@ -599,15 +635,21 @@ playGame.prototype = {
         "",
         answerStyle
       );
+
+      const originalFill = answer.style.fill;
+
       answer.anchor.set(0.5);
       answer.inputEnabled = true;
       answer.events.onInputDown.add(this.selectAnswer, this, 0, i);
-      answer.events.onInputOver.add(() =>
-        answer.setStyle({ font: "10px", fill: "#FFD700" })
-      );
-      answer.events.onInputOut.add(() =>
-        answer.setStyle({ font: "10px", fill: "#FFFFFF" })
-      );
+      answer.events.onInputOver.add(() => {
+        answer.style.fill = "#FFD700";
+        answer.updateText();
+      });
+
+      answer.events.onInputOut.add(() => {
+        answer.style.fill = originalFill;
+        answer.updateText();
+      });
       bg.addChild(answer);
       this.answers.push(answer);
     }
