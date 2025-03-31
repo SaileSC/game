@@ -132,14 +132,13 @@ titleScreen.prototype = {
     middleground.tilePosition.x -= 0.6;
   },
 };
-// Adicione esta nova state definition
+
 var loginScreen = function (game) {
   this.errorText = null;
-  this.requiredFields = []; // Armazenará os campos obrigatórios
+  this.requiredFields = [];
 };
 loginScreen.prototype = {
   create: function () {
-    //listenerBackspace
     var backKey = game.input.keyboard.addKey(Phaser.Keyboard.BACKSPACE);
     backKey.onDown.add(function () {
       if (this.currentInput) {
@@ -147,7 +146,6 @@ loginScreen.prototype = {
       }
     }, this);
 
-    // Background
     this.background = game.add.tileSprite(
       0,
       0,
@@ -163,7 +161,6 @@ loginScreen.prototype = {
       "middleground"
     );
 
-    // Modal container
     const modalWidth = 250;
     const modalHeight = 180;
     const modalX = (game.width - modalWidth) / 2;
@@ -171,7 +168,6 @@ loginScreen.prototype = {
 
     this.modal = game.add.group();
 
-    // Modal background
     const bg = game.add.graphics(modalX, modalY);
     bg.beginFill(0x000000, 0.9);
     bg.lineStyle(2, 0xffffff, 1);
@@ -179,32 +175,30 @@ loginScreen.prototype = {
     bg.endFill();
     this.modal.add(bg);
 
-    // Title
     const title = game.add.text(modalWidth / 2, 20, "LOGIN", {
       font: "bold 13px 'Press Start 2P'",
       fill: "#FFFFFF",
       stroke: "#000000",
       strokeThickness: 2,
     });
+
     title.anchor.set(0.5);
     bg.addChild(title);
 
-    // Input fields
     this.createInputField(bg, "Nome:", 40, true);
     this.createInputField(bg, "Setor:", 60, true);
     this.createInputField(bg, "Região:", 80, true);
 
-    // Gender selection
     const genderText = game.add.text(20, 100, "Personagem:", {
       font: "10px 'Press Start 2P'",
       fill: "#FFFFFF",
     });
     bg.addChild(genderText);
 
-    this.gender = "Male"; // Default
+    this.gender = "Male";
     this.maleText = game.add.text(105, 100, "Masculino", {
       font: "10px 'Press Start 2P'",
-      fill: "#FFD700", // Masculino começa selecionado
+      fill: "#FFD700",
     });
     this.maleText.inputEnabled = true;
     this.maleText.events.onInputDown.add(() => this.setGender("Male"), this);
@@ -212,7 +206,7 @@ loginScreen.prototype = {
 
     this.femaleText = game.add.text(105, 120, "Feminino", {
       font: "10px 'Press Start 2P'",
-      fill: "#FFFFFF", // Feminino começa não selecionado
+      fill: "#FFFFFF",
     });
     this.femaleText.inputEnabled = true;
     this.femaleText.events.onInputDown.add(
@@ -221,7 +215,6 @@ loginScreen.prototype = {
     );
     bg.addChild(this.femaleText);
 
-    // Start button
     const startBtn = game.add.button(
       modalWidth / 2,
       modalHeight - 10,
@@ -237,18 +230,15 @@ loginScreen.prototype = {
     startText.anchor.set(0.5);
     startBtn.addChild(startText);
 
-    // Store references to input fields
     this.inputFields = {
       name: this.nameInput,
       sector: this.sectorInput,
       region: this.regionInput,
     };
 
-    // Enable keyboard input
     this.currentInput = null;
     game.input.keyboard.addCallbacks(this, null, null, this.handleKeyPress);
 
-    // Focus first field
     this.focusInput(this.nameInput);
   },
 
@@ -262,14 +252,12 @@ loginScreen.prototype = {
     const fieldWidth = 140;
     const fieldX = 90;
 
-    // Input background (agora armazenamos a referência)
     const bg = game.add.graphics(fieldX - 5, y - 2);
     bg.beginFill(0x333333);
     bg.drawRect(0, 0, fieldWidth, 15);
     bg.endFill();
     parent.addChild(bg);
 
-    // Input text
     const inputText = game.add.text(fieldX, y, "", {
       font: "10px 'Press Start 2P'",
       fill: "#FFFFFF",
@@ -277,7 +265,6 @@ loginScreen.prototype = {
     });
     parent.addChild(inputText);
 
-    // Armazena campo obrigatório
     if (isRequired) {
       this.requiredFields.push({
         bg: bg,
@@ -286,7 +273,6 @@ loginScreen.prototype = {
       });
     }
 
-    // Store reference based on label
     switch (label) {
       case "Nome:":
         this.nameInput = inputText;
@@ -299,11 +285,9 @@ loginScreen.prototype = {
         break;
     }
 
-    // Make clickable
     bg.inputEnabled = true;
     bg.events.onInputDown.add(() => {
       this.focusInput(inputText);
-      // Remove o destaque de erro quando clica no campo
       bg.tint = 0xffffff;
       labelText.fill = "#FFFFFF";
     }, this);
@@ -320,17 +304,11 @@ loginScreen.prototype = {
   handleKeyPress: function (char) {
     if (!this.currentInput) return;
 
-    // Verifica se é Backspace (código 8)
     if (char.charCodeAt(0) === 8) {
-      // Remove o último caractere
       this.currentInput.text = this.currentInput.text.slice(0, -1);
-    }
-    // Verifica se é Enter (código 13)
-    else if (char.charCodeAt(0) === 13) {
+    } else if (char.charCodeAt(0) === 13) {
       this.handleEnter();
-    }
-    // Aceita apenas caracteres normais
-    else if (this.currentInput.text.length < 15) {
+    } else if (this.currentInput.text.length < 15) {
       this.currentInput.text += char;
     }
   },
@@ -347,7 +325,6 @@ loginScreen.prototype = {
 
   setGender: function (gender) {
     this.gender = gender;
-    // Update button colors
     this.maleText.fill = gender === "Male" ? "#FFD700" : "#FFFFFF";
     this.femaleText.fill = gender === "Female" ? "#FFD700" : "#FFFFFF";
   },
@@ -355,18 +332,15 @@ loginScreen.prototype = {
   startGame: function () {
     let hasError = false;
 
-    // Valida todos os campos obrigatórios
     this.requiredFields.forEach((field) => {
       if (!field.text.text || field.text.text.trim() === "") {
         hasError = true;
-        // Destaca o campo não preenchido
-        field.bg.tint = 0xff9999; // Vermelho claro
-        field.label.fill = "#FF0000"; // Vermelho
+        field.bg.tint = 0xff9999;
+        field.label.fill = "#FF0000";
       }
     });
 
     if (hasError) {
-      // Mostra mensagem de erro
       if (!this.errorText) {
         this.errorText = game.add.text(
           this.modal.width / 2,
@@ -382,7 +356,6 @@ loginScreen.prototype = {
         this.errorText.anchor.set(0.5);
         this.modal.add(this.errorText);
 
-        // Efeito de piscar
         game.add
           .tween(this.errorText)
           .to({ alpha: 0 }, 500, Phaser.Easing.Linear.None, true, 0, -1, true);
@@ -390,13 +363,11 @@ loginScreen.prototype = {
       return;
     }
 
-    // Remove mensagem de erro se existir
     if (this.errorText) {
       this.errorText.destroy();
       this.errorText = null;
     }
 
-    // Salva os dados do jogador
     gameData.player = {
       name: this.nameInput.text,
       sector: this.sectorInput.text,
@@ -404,7 +375,6 @@ loginScreen.prototype = {
       gender: this.gender,
     };
 
-    // Inicia o jogo
     this.game.state.start("PlayGame");
   },
 
@@ -415,21 +385,42 @@ loginScreen.prototype = {
 };
 
 var playGame = function (game) {
+  this.questionTiles = {};
+  this.currentQuestionTile = null;
   this.questions = [];
   this.currentQuestion = 0;
   this.selectedAnswer = null;
   this.isQuestionActive = false;
   this.correctAnswers = 0;
+  this.questModify = 0;
 };
 playGame.prototype = {
   create: function () {
     this.createBackgrounds();
     this.questions = gameData.questions.perguntas;
+    this.tileToQuestionMap = {
+      1: 0,
+      2: 1,
+      3: 2,
+      4: 3,
+      5: 4,
+      6: 5,
+      7: 6,
+      8: 7,
+      9: 8,
+      10: 9,
+      11: 10,
+      12: 11,
+      //13: 12,
+    };
+    for (let i = 1; i <= 12; i++) {
+      this.questionTiles[i] = false;
+    }
 
     this.createWorld();
     this.decorWorld();
-    this.createPlayer(7.5, 8);
-    //this.createPlayerName();
+    // this.createPlayer(7.5, 8);
+    this.createPlayer(45, 8);
     this.bindKeys();
     game.camera.follow(this.player, Phaser.Camera.FOLLOW_PLATFORMER);
 
@@ -441,7 +432,6 @@ playGame.prototype = {
 
     this.createQuestionModal();
 
-    // Timer for frog jumps
     frogTimer = game.time.create(false);
     frogTimer.loop(2000, this.switchFrogJump, this);
     frogTimer.start();
@@ -456,6 +446,86 @@ playGame.prototype = {
 
   resetHurt: function () {
     hurtFlag = false;
+  },
+
+  showQuestionPrompt: function () {
+    if (
+      !this.currentQuestionTile ||
+      this.questionTiles[this.currentQuestionTile]
+    )
+      return;
+
+    const questionIndex = this.tileToQuestionMap[this.currentQuestionTile];
+    const question = this.questions[questionIndex];
+
+    // Configurações padrão
+    let questionStyle = {
+      font: "bold 12px 'Press Start 2P'",
+      fill: "#FFFFFF",
+      stroke: "#000000",
+      strokeThickness: 2,
+      wordWrap: true,
+      wordWrapWidth: this.modal.width - 20,
+      align: "center",
+    };
+
+    let questionY = 20;
+    let answersStartY = 60;
+    let answerSpacing = 25;
+
+    console.log(questionIndex);
+
+    // Personalização por questão (usando o índice ou algum identificador)
+    if (questionIndex === 0) {
+      questionStyle = {
+        font: "bold 9.5px 'Press Start 2P'",
+        fill: "#FFFFFF",
+        stroke: "#000000",
+        strokeThickness: 2,
+        wordWrap: true,
+        wordWrapWidth: this.modal.width - 10,
+        align: "justify",
+      };
+      questionY = 32;
+      answersStartY = 65;
+    } else {
+      questionStyle = {
+        font: "bold 12px 'Press Start 2P'",
+        fill: "#FFFFFF",
+        stroke: "#000000",
+        strokeThickness: 2,
+        wordWrap: true,
+        wordWrapWidth: this.modal.width - 20,
+        align: "center",
+      };
+      questionY = 32;
+      answersStartY = 50;
+    }
+
+    // Aplicar estilo à pergunta
+    this.questionText.setText(question.descricao);
+    this.questionText.setStyle(questionStyle);
+    this.questionText.y = questionY;
+    this.questionText.anchor.set(0.5);
+
+    // Configurar respostas
+    for (let i = 0; i < question.opcoes.length; i++) {
+      this.answers[i].setText(question.opcoes[i]);
+
+      this.answers[i].setStyle({
+        font: "10px 'Press Start 2P'",
+        fill: "#FFFFFF",
+        wordWrap: true,
+        wordWrapWidth: this.modal.width,
+      });
+
+      this.answers[i].y = answersStartY + i * answerSpacing;
+      this.answers[i].anchor.set(0.5, 0);
+    }
+
+    this.modal.visible = true;
+    this.isQuestionActive = true;
+    game.physics.arcade.isPaused = true;
   },
 
   createQuestionModal: function () {
@@ -474,15 +544,18 @@ playGame.prototype = {
     bg.endFill();
     this.modal.add(bg);
 
-    this.questionText = game.add.text(modalWidth / 2, 29, "", {
-      font: "bold 12px 'Press Start 2P'",
+    const topSpace = this.currentQuestion === this.questModify ? 5 : 0;
+
+    this.questionText = game.add.text(modalWidth / 2, 29 + topSpace, "", {
+      font: `bold 12px 'Press Start 2P'`,
       fill: "#FFFFFF",
       stroke: "#000000",
       strokeThickness: 2,
       wordWrap: true,
-      wordWrapWidth: modalWidth - 20,
+      wordWrapWidth: modalWidth - 10,
       align: "center",
     });
+
     this.questionText.anchor.set(0.5);
     bg.addChild(this.questionText);
 
@@ -526,28 +599,16 @@ playGame.prototype = {
   },
 
   toggleQuestionnaire: function () {
-    // Se já completou todas as questões, não faz nada
-    if (this.currentQuestion >= this.questions.length) {
+    if (!this.currentQuestionTile) {
       return;
     }
 
-    if (!this.modal.visible) {
-      const question = this.questions[this.currentQuestion];
-      this.questionText.text = question.descricao;
-      for (let i = 0; i < question.opcoes.length; i++) {
-        this.answers[i].text = question.opcoes[i];
-        this.answers[i].setStyle({ font: "10px", fill: "#FFFFFF" });
-      }
-    }
+    if (this.isQuestionActive) return;
 
-    this.modal.visible = !this.modal.visible;
-    this.isQuestionActive = this.modal.visible;
-    game.physics.arcade.isPaused = this.isQuestionActive;
-    this.keys.forEach((key) => (key.enabled = !this.modal.visible));
+    this.showQuestionPrompt();
   },
 
   selectAnswer: function (target, pointer, answerIndex) {
-    // Limpa seleções anteriores
     this.answers.forEach((answer) =>
       answer.setStyle({ font: "10px", fill: "#FFFFFF" })
     );
@@ -575,14 +636,26 @@ playGame.prototype = {
         }
 
         game.time.events.add(
-          1500,
+          500,
           () => {
+            if (this.currentQuestionTile) {
+              this.questionTiles[this.currentQuestionTile] = true;
+
+              const tileX = this.layer.getTileX(this.player.x);
+              const tileY = this.layer.getTileY(
+                this.player.y + this.player.height / 2
+              );
+              const tile = this.map.getTile(tileX, tileY, this.layer);
+              if (tile && tile.index === this.currentQuestionTile) {
+                tile.index = 13; // Muda para um tile de "respondido"
+              }
+            }
+
+            this.currentQuestionTile = null;
             this.currentQuestion++;
 
-            // Fecha a questão atual antes de verificar se é a última
             this.closeQuestionModal();
 
-            // Verifica se era a última questão
             if (this.currentQuestion >= this.questions.length) {
               this.showCompletionMessage();
             }
@@ -597,8 +670,8 @@ playGame.prototype = {
       this
     );
   },
+
   closeQuestionModal: function () {
-    // Limpa todos os estilos e esconde o modal
     this.answers.forEach((answer) => {
       answer.setStyle({ font: "10px", fill: "#FFFFFF" });
     });
@@ -618,18 +691,15 @@ playGame.prototype = {
   },
 
   showCompletionMessage: function () {
-    // Cria um container para a mensagem
     this.completionContainer = game.add.group();
     this.completionContainer.fixedToCamera = true;
 
-    // Fundo semi-transparente
     const bg = game.add.graphics(0, 0);
     bg.beginFill(0x000000, 0.7);
     bg.drawRect(0, 0, game.width, game.height);
     bg.endFill();
     this.completionContainer.add(bg);
 
-    // Texto da mensagem
     const text = game.add.text(
       game.width / 2,
       game.height / 2,
@@ -645,9 +715,8 @@ playGame.prototype = {
     text.anchor.set(0.5);
     this.completionContainer.add(text);
 
-    // Remove após 2 segundos
     game.time.events.add(
-      2000,
+      1000,
       () => {
         if (this.completionContainer) {
           this.completionContainer.destroy(true);
@@ -688,18 +757,28 @@ playGame.prototype = {
     this.layer = this.map.createLayer("Tile Layer 1");
     this.layer.resizeWorld();
 
+    // Configurar callbacks de colisão para os tiles de perguntas (1-12)
+    for (let i = 1; i <= 12; i++) {
+      this.map.setTileIndexCallback(i, this.onQuestionTileHit, this);
+    }
+
     this.map.setCollision([
       27, 29, 31, 33, 35, 37, 77, 81, 86, 87, 127, 129, 131, 133, 134, 135, 83,
       84, 502, 504, 505, 529, 530, 333, 335, 337, 339, 366, 368, 262, 191, 193,
       195, 241, 245, 291, 293, 295, 79, 81,
     ]);
 
-    // Set one-way collision tiles
     [35, 36, 84, 86, 134, 135, 366, 367, 368, 370, 262, 470, 370].forEach(
       (tileIndex) => {
         this.setTopCollisionTiles(tileIndex);
       }
     );
+  },
+  onQuestionTileHit: function (sprite, tile) {
+    if (this.isQuestionActive || this.questionTiles[tile.index]) return;
+
+    this.currentQuestionTile = tile.index;
+    this.showQuestionPrompt();
   },
 
   setTopCollisionTiles: function (tileIndex) {
@@ -714,7 +793,6 @@ playGame.prototype = {
   },
 
   decorWorld: function () {
-    // Platform 1 decorations
     game.add.image(100, 51, "atlas-props", "tree");
     game.add.image(324, 116, "atlas-props", "bush");
     game.add.image(340, 51, "atlas-props", "tree");
@@ -728,13 +806,11 @@ playGame.prototype = {
     game.add.image(1250, 51, "atlas-props", "tree");
     game.add.image(1450, 51, "atlas-props", "tree");
 
-    // Platform 2 decorations
     game.add.image(480, 210, "atlas-props", "rock");
     game.add.image(764, 162, "atlas-props", "big-crate");
     game.add.image(750, 192, "atlas-props", "big-crate");
     game.add.image(780, 192, "atlas-props", "big-crate");
 
-    // Platform 3 decorations
     game.add.image(420, 403, "atlas-props", "tree");
     game.add.image(491, 481, "atlas-props", "rock");
     game.add.image(1036, 388, "atlas-props", "house");
@@ -754,19 +830,6 @@ playGame.prototype = {
     game.add.image(1450, 403, "atlas-props", "tree");
     game.add.image(590, 307, "atlas-props", "tree");
     game.add.image(125, 463, "atlas-props", "door");
-  },
-  createPlayerName: function () {
-    // Cria o texto do nome como um objeto separado
-    this.playerName = game.add.text(0, -50, gameData.player.name, {
-      font: "8px 'Press Start 2P'",
-      fill: "#FFFFFF",
-      stroke: "#000000",
-      strokeThickness: 2,
-      align: "center",
-    });
-
-    // Centraliza o texto
-    this.playerName.anchor.set(0.5);
   },
 
   createPlayer: function (x, y) {
@@ -818,7 +881,6 @@ playGame.prototype = {
     this.items = game.add.group();
     this.items.enableBody = true;
 
-    // Create items
     this.createCherry(15, 4);
     this.createCherry(18, 4);
     this.createCherry(33, 8);
@@ -851,11 +913,10 @@ playGame.prototype = {
     this.createGem(19, 28);
     this.createCertUniq(8.5, 27);
 
-    // Create enemies
-    this.createEagle(10, 2, 200, 3.2);
-    this.createEagle(77, 1, 130, 3);
-    //this.createOpossum(20, 10);
-    //this.createFrog(25, 8);
+    this.createEagle(8, 2, 135, 3.2);
+    this.createEagle(40, 1, 100, 3);
+    this.createEagle(55, 1, 100, 3);
+    this.createEagle(81.5, 0, 150, 4);
   },
 
   createEnemyDeath: function (x, y) {
@@ -1035,12 +1096,18 @@ playGame.prototype = {
   },
 
   update: function () {
+    if (this.isQuestionActive) return;
+    //this.checkQuestionTiles();
     if (this.player && this.playerName) {
       this.playerName.x = this.player.x;
-      this.playerName.y = this.player.y - 20; // 30 pixels acima do personagem
+      this.playerName.y = this.player.y - 20;
     }
 
-    if (this.isQuestionActive) return;
+    game.physics.arcade.collide(
+      this.player,
+      this.layer,
+      this.handleTileCollision
+    );
 
     game.physics.arcade.collide(this.player, this.layer);
     game.physics.arcade.collide(this.enemies, this.layer);
@@ -1067,6 +1134,9 @@ playGame.prototype = {
   pickItem: function (player, item) {
     this.createItemFeedback(item.x, item.y);
     item.kill();
+  },
+  handleTileCollision: function (player, tile) {
+    // A verificação já é feita pelo tileIndexCallback
   },
 
   enemiesManager: function () {
