@@ -419,8 +419,8 @@ playGame.prototype = {
 
     this.createWorld();
     this.decorWorld();
-    // this.createPlayer(7.5, 8);
-    this.createPlayer(45, 8);
+    this.createPlayer(7.5, 8);
+    //this.createPlayer(45, 8);
     this.bindKeys();
     game.camera.follow(this.player, Phaser.Camera.FOLLOW_PLATFORMER);
 
@@ -509,18 +509,43 @@ playGame.prototype = {
     this.questionText.anchor.set(0.5);
 
     // Configurar respostas
+    const defaultAnswerStyle = {
+      font: "10px 'Press Start 2P'",
+      fill: "#FFFFFF",
+      stroke: "#000000",
+      strokeThickness: 1,
+      wordWrap: true,
+      wordWrapWidth: this.modal.width - 40,
+    };
+
     for (let i = 0; i < question.opcoes.length; i++) {
       this.answers[i].setText(question.opcoes[i]);
 
-      this.answers[i].setStyle({
-        font: "10px 'Press Start 2P'",
-        fill: "#FFFFFF",
-        wordWrap: true,
-        wordWrapWidth: this.modal.width,
-      });
+      // Aplicar estilo padrão
+      this.answers[i].setStyle(defaultAnswerStyle);
 
-      this.answers[i].y = answersStartY + i * answerSpacing;
+      // Posicionamento padrão
+      this.answers[i].y = 55 + i * 25;
       this.answers[i].anchor.set(0.5, 0);
+
+      // Condições para personalização específica
+      if (questionIndex === 2) {
+        const space = 60;
+        this.answers[i].setStyle({
+          font: "10px 'Press Start 2P'",
+          fill: "#FFFFFF",
+          wordWrapWidth: this.modal.width - 20,
+        });
+        this.answers[i].y = space + i * 22;
+      } else if (questionIndex == 0) {
+        const space = 70;
+        this.answers[i].setStyle({
+          font: "10px 'Press Start 2P'",
+          fill: "#FFFFFF",
+          wordWrapWidth: this.modal.width - 20,
+        });
+        this.answers[i].y = space + i * 22;
+      }
     }
 
     this.modal.visible = true;
