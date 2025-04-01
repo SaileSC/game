@@ -419,8 +419,8 @@ playGame.prototype = {
 
     this.createWorld();
     this.decorWorld();
-    //this.createPlayer(7.5, 8);
-    this.createPlayer(89, 8);
+    this.createPlayer(7.5, 8);
+    //this.createPlayer(10, 30);
     this.bindKeys();
     game.camera.follow(this.player, Phaser.Camera.FOLLOW_PLATFORMER);
 
@@ -472,8 +472,6 @@ playGame.prototype = {
     let questionY = 20;
     let answersStartY = 60;
     let answerSpacing = 25;
-
-    console.log(questionIndex);
 
     // Personalização por questão (usando o índice ou algum identificador)
     if (questionIndex === 0) {
@@ -572,12 +570,109 @@ playGame.prototype = {
             wordWrapWidth: this.modal.width - 20,
           });
         }
-      } else {
+      } else if (questionIndex == 7) {
         const space = 50;
+
+        if (i == 0) {
+          this.answers[i].y = space + i * 22;
+        } else if (i == 1) {
+          this.answers[i].y = space + 1 * 22;
+        } else if (i == 2) {
+          this.answers[i].y = space + 2.8 * 22;
+        } else if (i == 3) {
+          this.answers[i].y = space + 3.8 * 22;
+        }
+
+        if (i == 1 || i == 1) {
+          this.answers[i].setStyle({
+            font: "10px 'Press Start 2P'",
+            fill: "#FFFFFF",
+            wordWrap: true,
+            wordWrapWidth: this.modal.width - 20,
+            align: "center",
+          });
+        } else {
+          this.answers[i].setStyle({
+            font: "10px 'Press Start 2P'",
+            fill: "#FFFFFF",
+            wordWrapWidth: this.modal.width - 20,
+          });
+        }
+      } else if (questionIndex == 9) {
+        const space = 50;
+
+        if (i == 0) {
+          this.answers[i].y = space + i * 22;
+        } else if (i == 1) {
+          this.answers[i].y = space + 2 * 22;
+        } else if (i == 2) {
+          this.answers[i].y = space + 2.8 * 22;
+        } else if (i == 3) {
+          this.answers[i].y = space + 4 * 22;
+        }
+
+        if (i < 3) {
+          this.answers[i].setStyle({
+            font: "8.5px 'Press Start 2P'",
+            fill: "#FFFFFF",
+            wordWrap: true,
+            wordWrapWidth: this.modal.width - 4,
+            align: "justify",
+          });
+        } else {
+          this.answers[i].setStyle({
+            font: "10px 'Press Start 2P'",
+            fill: "#FFFFFF",
+            wordWrapWidth: this.modal.width - 20,
+          });
+        }
+      } else if (questionIndex == 10) {
+        const space = 60;
 
         this.answers[i].setStyle({
           font: "10px 'Press Start 2P'",
           fill: "#FFFFFF",
+          wordWrapWidth: this.modal.width - 20,
+        });
+        this.answers[i].y = space + i * 22;
+
+        if (i == 3) {
+          this.answers[i].setStyle({
+            font: "0px 'Press Start 2P'",
+            fill: "#FFFFFF",
+            wordWrap: true,
+            wordWrapWidth: this.modal.width - 4,
+            align: "justify",
+          });
+        }
+      } else if (questionIndex == 11) {
+        const space = 54;
+
+        if (i == 0) {
+          this.answers[i].y = space + i * 22;
+        } else if (i == 1) {
+          this.answers[i].y = space + 1.5 * 22;
+        } else if (i == 2) {
+          this.answers[i].y = space + 3 * 22;
+        }
+
+        if (i < 3) {
+          this.answers[i].setStyle({
+            font: "10px 'Press Start 2P'",
+            fill: "#FFFFFF",
+            wordWrap: true,
+            wordWrapWidth: this.modal.width - 20,
+            align: "center",
+          });
+        }
+      } else {
+        const space = 55;
+        this.answers[i].setStyle({
+          font: "10px 'Press Start 2P'",
+          fill: "#FFFFFF",
+          stroke: "#000000",
+          strokeThickness: 1,
+          wordWrap: true,
           wordWrapWidth: this.modal.width - 20,
         });
         this.answers[i].y = space + i * 22;
@@ -676,30 +771,33 @@ playGame.prototype = {
   },
 
   selectAnswer: function (target, pointer, answerIndex) {
-    this.answers.forEach((answer) =>
-      answer.setStyle({ font: "10px", fill: "#FFFFFF" })
-    );
+    this.answers.forEach((answer) => {
+      answer.style.fill = "#FFFFFF";
+      answer.updateText();
+    });
 
     const perguntaAtual = this.questions[this.currentQuestion];
     const respostaCorreta = perguntaAtual.resposta_correta;
 
-    if (target) target.setStyle({ font: "10px", fill: "#FFA500" });
+    if (target) {
+      target.style.fill = "#FFA500";
+      target.updateText();
+    }
 
     game.time.events.add(
       500,
       () => {
-        if (answerIndex === respostaCorreta) {
+        if (answerIndex === respostaCorreta || respostaCorreta == 10) {
           this.correctAnswers++;
-          this.answers[answerIndex].setStyle({ font: "10px", fill: "#00FF00" });
-        } else if (respostaCorreta == 10) {
-          this.correctAnswers++;
-          this.answers[answerIndex].setStyle({ font: "10px", fill: "#00FF00" });
+
+          this.answers[answerIndex].style.fill = "#00FF00";
+          this.answers[answerIndex].updateText();
         } else {
-          this.answers[answerIndex].setStyle({ font: "10px", fill: "#FF0000" });
-          this.answers[respostaCorreta].setStyle({
-            font: "10px",
-            fill: "#00FF00",
-          });
+          this.answers[answerIndex].style.fill = "#FF0000";
+          this.answers[respostaCorreta].style.fill = "#00FF00";
+
+          this.answers[answerIndex].updateText();
+          this.answers[respostaCorreta].updateText();
         }
 
         game.time.events.add(
@@ -740,7 +838,8 @@ playGame.prototype = {
 
   closeQuestionModal: function () {
     this.answers.forEach((answer) => {
-      answer.setStyle({ font: "10px", fill: "#FFFFFF" });
+      answer.style.fill = "#FFFFFF";
+      answer.updateText();
     });
     this.modal.visible = false;
     this.isQuestionActive = false;
